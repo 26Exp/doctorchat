@@ -4,4 +4,3 @@
 
 @extends('layouts.app')
 
-@endforeach
