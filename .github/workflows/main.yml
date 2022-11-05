@@ -1,0 +1,53 @@
+name: Production deploy CI/CD
+on:
+  push:
+    branches:
+    - main
+jobs:
+  Deploying:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CD via SSH Private Key
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /www/wwwroot/new.doctorchat.md
+            echo "Deploying application ..."
+
+            # Enter in maintenance mode WP
+            wp maintenance-mode activate --allow-root
+            
+            # Update codebase
+            git fetch origin main
+            git reset --hard origin/main
+            
+            # Exit maintenance mode
+            wp maintenance-mode deactivate --allow-root
+      
+            # Reload PHP to update opcache
+            echo "" | sudo -S service php-fpm-81 reload
+            
+            # Got up
+            php artisan up
+              
+            echo "✅✅✅ Application deployed!"
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          pass: ${{ secrets.SSH_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          format: html
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ✅ <b>[PROD] Doctorchat WP - deployed!</b>
+            🥷 <b>User</b>: ${{ github.actor }}
+            📂 <b>Commit:</b> <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
+            📌 <b>Branch:</b> ${{ github.ref }}
+            📌 <b>Commit:</b> ${{ github.sha }}
+            📌 <b>Repository:</b> ${{ github.repository }}
+            📌 <b>Workflow:</b> ${{ github.workflow }}
+            📌 <b>Run:</b> ${{ github.run_id }}
+            📌 <b>Run Number:</b> ${{ github.run_number }}
