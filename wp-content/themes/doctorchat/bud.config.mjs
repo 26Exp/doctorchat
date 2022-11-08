@@ -29,12 +29,12 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy("http://example.test")
+    .proxy("http://doctorchatmd.local/")
 
     /**
      * Development origin
      */
-    .serve("http://doc.loc")
+    .serve("http://doctorchatmd.local/")
 
     /**
      * URI of the `public` directory
@@ -46,31 +46,30 @@ export default async (app) => {
      *
      * @note This overwrites `theme.json` on every build.
      */
-    .wpjson
-      .settings({
-        color: {
-          custom: false,
-          customGradient: false,
-          defaultPalette: false,
-          defaultGradients: false,
-        },
-        custom: {
-          spacing: {},
-          typography: {
-            'font-size': {},
-            'line-height': {},
-          },
-        },
-        spacing: {
-          padding: true,
-          units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-        },
+    .wpjson.settings({
+      color: {
+        custom: false,
+        customGradient: false,
+        defaultPalette: false,
+        defaultGradients: false,
+      },
+      custom: {
+        spacing: {},
         typography: {
-          customFontSize: false,
+          "font-size": {},
+          "line-height": {},
         },
-      })
-      .useTailwindColors()
-      .useTailwindFontFamily()
-      .useTailwindFontSize()
-      .enable()
+      },
+      spacing: {
+        padding: true,
+        units: ["px", "%", "em", "rem", "vw", "vh"],
+      },
+      typography: {
+        customFontSize: false,
+      },
+    })
+    .useTailwindColors()
+    .useTailwindFontFamily()
+    .useTailwindFontSize()
+    .enable();
 };

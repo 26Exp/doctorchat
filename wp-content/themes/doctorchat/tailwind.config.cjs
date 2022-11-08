@@ -3,7 +3,9 @@ module.exports = {
   content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}"],
   theme: {
     extend: {
-      colors: {}, // Extend Tailwind's default colors
+      colors: {
+        "dc-mint": "#A0D2D2",
+      }, // Extend Tailwind's default colors
     },
   },
   plugins: [],
