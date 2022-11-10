@@ -27,3 +27,4 @@ wp-content/themes/sage/yarn.lock
 *.bak
 *-bak
 .coingecko-*
+*.DS_Store
