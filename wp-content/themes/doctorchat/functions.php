@@ -77,3 +77,28 @@ collect(['setup', 'filters'])
 */
 
 add_theme_support('sage');
+
+function get_fields_group($group_id){
+    $fields = acf_get_fields($group_id);
+    $fields_array = array();
+    foreach($fields as $field){
+        $fields_array[$field['name']] = get_field($field['name']);
+    }
+    return $fields_array;
+}
+
+// add shortcode
+add_shortcode('get_fields_group', 'get_all_fields');
+function get_all_fields($atts): array
+{
+    $atts = shortcode_atts(
+        array(
+            'group_id' => '',
+        ), $atts, 'get_fields_group' );
+    $fields = acf_get_fields($atts['group_id']);
+    $fields_array = array();
+    foreach($fields as $field){
+        $fields_array[$field['name']] = get_field($field['name']);
+    }
+    return $fields_array;
+}
