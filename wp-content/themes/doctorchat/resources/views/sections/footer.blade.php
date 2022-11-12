@@ -1,5 +1,3 @@
-<footer class="bg-[#92D4D2]">
-      @php(dynamic_sidebar('sidebar-footer'))
       <div class="dc-container py-8 lg:py-28">
         <div class="space-y-12 lg:flex lg:justify-between lg:space-y-0 lg:space-x-16 lg:px-11">
           <a href="/">
@@ -10,6 +8,7 @@
           </a>
           <div class="flex justify-between space-x-7 text-white lg:space-x-12 xl:space-x-28">
             <div class="max-w-xs space-y-4">
+              @php(dynamic_sidebar('footer-one'))
               <h4 class="pb-4 text-3xl font-bold lg:text-4xl">Contacte</h4>
               <div>
                 <h5 class="font-bold lg:text-lg">Adresa Juridică:</h5>

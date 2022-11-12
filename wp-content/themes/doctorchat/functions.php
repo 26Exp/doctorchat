@@ -78,27 +78,25 @@ collect(['setup', 'filters'])
 
 add_theme_support('sage');
 
-function get_fields_group($group_id){
-    $fields = acf_get_fields($group_id);
-    $fields_array = array();
-    foreach($fields as $field){
-        $fields_array[$field['name']] = get_field($field['name']);
-    }
-    return $fields_array;
+function footer_widget_one() {
+    register_sidebar( array(
+        'name' => 'Footer 1',
+        'id' => 'footer-one',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ) );
 }
-
-// add shortcode
-add_shortcode('get_fields_group', 'get_all_fields');
-function get_all_fields($atts): array
-{
-    $atts = shortcode_atts(
-        array(
-            'group_id' => '',
-        ), $atts, 'get_fields_group' );
-    $fields = acf_get_fields($atts['group_id']);
-    $fields_array = array();
-    foreach($fields as $field){
-        $fields_array[$field['name']] = get_field($field['name']);
-    }
-    return $fields_array;
+function footer_widget_two() {
+    register_sidebar( array(
+        'name' => 'Footer 2',
+        'id' => 'footer-two',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ) );
 }
+add_action( 'widgets_init', 'footer_widget_one' );
+add_action( 'widgets_init', 'footer_widget_two' );
