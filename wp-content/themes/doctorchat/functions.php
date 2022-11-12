@@ -100,3 +100,8 @@ function footer_widget_two() {
 }
 add_action( 'widgets_init', 'footer_widget_one' );
 add_action( 'widgets_init', 'footer_widget_two' );
+
+function register_footer_menu() {
+    register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_footer_menu' );
