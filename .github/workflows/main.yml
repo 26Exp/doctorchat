@@ -31,6 +31,8 @@ jobs:
             nvm use 16
             
             cd wp-content/themes/doctorchat
+            
+            npm install --global yarn
             yarn
             yarn build
             cd ../../..
