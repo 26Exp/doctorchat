@@ -14,7 +14,7 @@
         <div class="space-y-4">
           @php(dynamic_sidebar('footer-two'))
           <div>
-            @php(wp_nav_menu(['theme_location' => 'footer', 'menu_class' => 'list-disc pl-5']))
+            @php(wp_nav_menu(['theme_location' => 'footer-menu', 'menu_class' => 'list-disc pl-5']))
           </div>
         </div>
       </div>
