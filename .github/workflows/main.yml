@@ -13,7 +13,8 @@ jobs:
           command: |
             cd /www/wwwroot/new.doctorchat.md
             echo "Deploying application ..."
-
+            bash
+            
             # Enter in maintenance mode WP
             wp maintenance-mode activate --allow-root
             
