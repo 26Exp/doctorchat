@@ -7,7 +7,7 @@
 @section('content')
   <!-- Hero Section Start -->
   <section
-    class="relative h-screen bg-[url('../src/resources/images/hero-section.jpg')] bg-cover bg-center bg-no-repeat pt-[10vh]"
+    class="relative h-screen bg-[url('./resources/images/hero-section.jpg')] bg-cover bg-center bg-no-repeat pt-[10vh]"
   >
     <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
     <div class="dc-container relative z-10 h-full w-full">
