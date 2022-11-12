@@ -21,6 +21,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             
+            nvm use 16
+            cd wp-content/themes/doctorchat
+            yarn
+            yarn build
+            
             # Exit maintenance mode
             wp maintenance-mode deactivate --allow-root
       
