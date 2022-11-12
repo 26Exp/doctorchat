@@ -1135,9 +1135,24 @@
           "color": "#881337"
         },
         {
-          "name": "Dc-mint",
-          "slug": "dc-mint",
+          "name": "Doctorchat Mint",
+          "slug": "doctorchat-mint",
           "color": "#a0d2d2"
+        },
+        {
+          "name": "Doctorchat Red",
+          "slug": "doctorchat-red",
+          "color": "#e81f41"
+        },
+        {
+          "name": "Doctorchat Gray",
+          "slug": "doctorchat-gray",
+          "color": "#494949"
+        },
+        {
+          "name": "Doctorchat Blue",
+          "slug": "doctorchat-blue",
+          "color": "#1c1f62"
         }
       ]
     },

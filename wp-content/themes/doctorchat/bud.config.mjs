@@ -19,7 +19,8 @@ export default async (app) => {
     /**
      * Directory contents to be included in the compilation
      */
-    .assets(["images"])
+
+    .assets(['images', 'svgs'])
 
     /**
      * Matched files trigger a page reload when modified
@@ -29,7 +30,7 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy("http://example.test")
+    .proxy("http://doc.loc")
 
     /**
      * Development origin
@@ -39,7 +40,7 @@ export default async (app) => {
     /**
      * URI of the `public` directory
      */
-    .setPublicPath("/app/themes/sage/public/")
+    .setPublicPath("/wp-content/themes/doctorchat/public/")
 
     /**
      * Generate WordPress `theme.json`

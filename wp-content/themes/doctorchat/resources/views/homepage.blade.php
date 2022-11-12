@@ -7,9 +7,10 @@
 @section('content')
   <!-- Hero Section Start -->
   <section
-    class="relative h-screen bg-[url('./resources/images/hero-section.jpg')] bg-cover bg-center bg-no-repeat pt-[10vh]"
+    class="relative h-screen bg-cover bg-center bg-no-repeat pt-[10vh]"
+    style="background-image: url({{ asset('images/hero-section.jpg') }})"
   >
-    <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
+    <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div  >
     <div class="dc-container relative z-10 h-full w-full">
       <div class="flex h-full w-full flex-col justify-center">
         <header class="mb-7 lg:mb-12">
@@ -44,7 +45,7 @@
         class="flex flex-col items-center space-x-0 space-y-5 lg:flex-row lg:items-stretch lg:space-y-0 lg:space-x-8 xl:space-x-11"
       >
         <div class="highlights-block">
-          <img class="icon" src="./resources/svgs/check.svg" alt="Doctori verificați" />
+          <img class="icon" src="@asset('svgs/check.svg')" alt="Doctori verificați" />
           <h3 class="title">Doctori verificați</h3>
           <p class="description">
             DoctorChat selectează cu atenție specialiștii publicați pe aplicație. Fiecare doctor
@@ -53,7 +54,7 @@
           </p>
         </div>
         <div class="highlights-block">
-          <img class="icon" src="./resources/svgs/24h.svg" alt="Rapid și ușor" />
+          <img class="icon" src="@asset('svgs/24h.svg')" alt="Rapid și ușor" />
           <h3 class="title">Rapid și ușor</h3>
           <p class="description">
             În decurs de 24h din momentul accesării. Fără drum, fără stat în rând. Direct de la
@@ -63,7 +64,7 @@
           </p>
         </div>
         <div class="highlights-block">
-          <img class="icon" src="./resources/svgs/avatar.svg" alt="Confidențial și anonim" />
+          <img class="icon" src="@asset('svgs/avatar.svg')" alt="Confidențial și anonim" />
           <h3 class="title">Confidențial și anonim</h3>
           <p class="description">
             DoctorChat garantează confidențialitatea consultațiilor video de pe platformă. Tot ce
@@ -79,8 +80,8 @@
   <!-- Separator Start -->
   <div class="flex items-center justify-center px-2 py-14 md:py-28">
     <picture>
-      <source media="(min-width: 768px)" srcset="./resources/svgs/section-separator.svg" />
-      <img src="./resources/svgs/section-separator-mobile.svg" alt="DoctorChat Logo" />
+      <source media="(min-width: 768px)" srcset="@asset('svgs/section-separator.svg')" />
+      <img src="@asset('svgs/section-separator-mobile.svg')" alt="DoctorChat Logo" />
     </picture>
   </div>
   <!-- Separator End -->
@@ -102,7 +103,7 @@
             </p>
           </div>
           <div class="preview">
-            <img src="./resources/images/how-works-1.png" alt="Înregistrează-te" />
+            <img src="@asset('images/how-works-1.png')" alt="Înregistrează-te" />
           </div>
         </div>
         <div class="how-works-block">
@@ -114,7 +115,7 @@
             </p>
           </div>
           <div class="preview">
-            <img src="./resources/images/how-works-2.png" alt="Înregistrează-te" />
+            <img src="@asset('images/how-works-2.png')" alt="Înregistrează-te" />
           </div>
         </div>
         <div class="how-works-block">
@@ -128,7 +129,7 @@
             </ul>
           </div>
           <div class="preview">
-            <img src="./resources/images/how-works-3.png" alt="Înregistrează-te" />
+            <img src=@asset('images/how-works-3.png')" alt="Înregistrează-te" />
           </div>
         </div>
         <div class="how-works-block">
@@ -140,7 +141,7 @@
             </p>
           </div>
           <div class="preview">
-            <img src="./resources/images/how-works-1.png" alt="Înregistrează-te" />
+            <img src="@asset('images/how-works-1.png')" alt="Înregistrează-te" />
           </div>
         </div>
         <div class="how-works-block">
@@ -152,7 +153,7 @@
             </p>
           </div>
           <div class="preview">
-            <img src="./resources/images/how-works-5.png" alt="Înregistrează-te" />
+            <img src="@asset('images/how-works-5.png')" alt="Înregistrează-te" />
           </div>
         </div>
       </main>
@@ -165,7 +166,8 @@
 
   <!-- Banner Start -->
   <section
-    class="banner relative bg-[url('../src/resources/images/banner.jpg')] bg-cover bg-center bg-no-repeat"
+    class="banner relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('{{ asset('images/banner.jpg') }}')"
   >
     <div
       class="pointer-events-none absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/60"
@@ -244,10 +246,10 @@
             </div>
 
             <div class="swiper-button-prev">
-              <img src="./resources/svgs/arrow-left.svg" alt="Previous Slide" />
+              <img src="@asset('svgs/arrow-left.svg')" alt="Previous Slide" />
             </div>
             <div class="swiper-button-next">
-              <img src="./resources/svgs/arrow-right.svg" alt="Next Slide" />
+              <img src="@asset('svgs/arrow-right.svg')" alt="Next Slide" />
             </div>
           </div>
         </div>
@@ -295,7 +297,7 @@
           <button class="btn btn-small">Află mai mult</button>
         </div>
         <div class="preview">
-          <img src="./resources/images/blog-1.jpg" alt="Blog 1" />
+          <img src="@asset('images/blog-1.jpg')" alt="Blog 1" />
         </div>
       </article>
       <article class="blog">
@@ -311,7 +313,7 @@
           <button class="btn btn-small">Află mai mult</button>
         </div>
         <div class="preview">
-          <img src="./resources/images/blog-2.jpg" alt="Blog 1" />
+          <img src="@asset('images/blog-2.jpg')" alt="Blog 1" />
         </div>
       </article>
       <article class="blog">
@@ -328,7 +330,7 @@
           <button class="btn btn-small">Află mai mult</button>
         </div>
         <div class="preview">
-          <img src="./resources/images/blog-3.jpg" alt="Blog 1" />
+          <img src="@asset('images/blog-3.jpg')" alt="Blog 1" />
         </div>
       </article>
     </div>
@@ -338,8 +340,8 @@
   <!-- Separator Start -->
   <div class="flex items-center justify-center px-2 py-14 md:py-28">
     <picture>
-      <source media="(min-width: 768px)" srcset="./resources/svgs/section-separator.svg" />
-      <img src="./resources/svgs/section-separator-mobile.svg" alt="DoctorChat Logo" />
+      <source media="(min-width: 768px)" srcset="@asset('svgs/section-separator.svg')" />
+      <img src="@asset('svgs/section-separator-mobile.svg')" alt="DoctorChat Logo" />
     </picture>
   </div>
   <!-- Separator End -->
