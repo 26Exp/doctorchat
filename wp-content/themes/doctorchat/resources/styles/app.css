@@ -1,3 +1,352 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Globals */
+.dc-container {
+  @apply mx-auto max-w-screen-2xl px-5 md:px-10;
+}
+
+.navigation-link {
+  @apply text-2xl text-white transition-colors hover:text-gray-200;
+}
+
+.btn {
+  @apply flex items-center justify-center rounded-full bg-doctorchat-red font-bold text-white transition-colors hover:bg-doctorchat-red/80;
+}
+
+.btn-default {
+  @apply min-h-[48px] px-6 py-3 text-2xl font-bold leading-none text-white;
+}
+
+.btn-small {
+  @apply min-h-[48px] px-5 py-2 text-xl font-bold leading-none text-white;
+}
+
+@screen lg {
+  .btn-default {
+    @apply min-h-[86px] px-12 py-5 text-3xl leading-none;
+  }
+
+  .btn-small {
+    @apply min-h-[60px] px-10 py-3 text-2xl leading-none;
+  }
+}
+
+.section-title {
+  @apply text-4xl font-bold text-doctorchat-red md:text-5xl lg:text-center lg:text-7xl;
+}
+
+.banner {
+  @apply md:h-[740px];
+}
+
+.banner-with-bg {
+  background-image: url(../src/resources/images/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: 175%;
+}
+
+@screen md {
+  .banner-with-bg {
+    background-size: 110%;
+  }
+}
+
+/* Highlights Section */
+.highlights-block {
+  @apply flex max-w-[482px] flex-1 flex-col items-start justify-start rounded-2xl bg-white p-5 text-left;
+
+  box-shadow: #494949 0px 1px 2px 0px;
+}
+
+.highlights-block .icon {
+  @apply mb-3 w-14;
+}
+
+.highlights-block .title {
+  @apply mb-4 text-2xl font-bold text-doctorchat-red;
+}
+
+.highlights-block .description {
+  @apply text-doctorchat-gray;
+}
+
+@screen lg {
+  .highlights-block {
+    @apply items-center px-6 py-5 text-center;
+  }
+
+  .highlights-block:nth-child(2) {
+    box-shadow: #494949 0px -1px 2px 0px;
+  }
+
+  .highlights-block .icon {
+    @apply w-16;
+  }
+
+  .highlights-block .title {
+    @apply mb-5 text-2xl;
+  }
+
+  .highlights-block .description {
+    @apply text-lg;
+  }
+}
+
+@screen xl {
+  .highlights-block {
+    @apply px-8;
+  }
+
+  .highlights-block .title {
+    @apply text-3xl;
+  }
+
+  .highlights-block .description {
+    @apply text-xl;
+  }
+}
+
+@screen 2xl {
+  .highlights-block {
+    @apply px-12;
+  }
+
+  .highlights-block .title {
+    @apply text-4xl;
+  }
+
+  .highlights-block .description {
+    @apply text-2xl;
+  }
+}
+
+/* How it works Section */
+.how-works-section {
+  @apply space-y-20;
+}
+
+.how-works-block {
+  @apply flex flex-col items-center;
+}
+
+.how-works-block .caption {
+  @apply mb-9 max-w-[610px];
+}
+
+.how-works-block .title {
+  @apply mb-4 text-2xl font-extrabold text-doctorchat-mint;
+}
+
+.how-works-block .description {
+  @apply text-doctorchat-gray;
+}
+
+.how-works-block .preview {
+  @apply flex items-center justify-center;
+}
+
+.how-works-block .preview img {
+  @apply m-[-15px] h-full w-full max-w-[482px];
+}
+
+@screen md {
+  .how-works-section {
+    @apply space-y-28;
+  }
+
+  .how-works-block {
+    @apply grid grid-cols-2 gap-6;
+  }
+
+  .how-works-block:nth-child(even) .caption {
+    @apply order-2 justify-self-end text-right;
+  }
+
+  .how-works-block .caption {
+    @apply mb-0 w-full;
+  }
+
+  .how-works-block .title {
+    @apply text-3xl;
+  }
+
+  .how-works-block .description {
+    @apply text-lg;
+  }
+
+  .how-works-block .preview {
+    @apply w-full;
+  }
+}
+
+@screen lg {
+  .how-works-section {
+    @apply relative space-y-0;
+  }
+
+  .how-works-section::after {
+    @apply absolute top-0 left-1/2 h-full w-1 -translate-x-1/2 border-l-2 border-dashed border-l-doctorchat-red content-[''];
+  }
+
+  .how-works-block {
+    @apply relative py-28;
+  }
+
+  .how-works-block:first-child {
+    @apply pt-0;
+  }
+
+  .how-works-block .caption::after {
+    @apply absolute bottom-0 h-1 w-1/2 border-b-2 border-dashed border-b-doctorchat-red content-[''];
+  }
+
+  .how-works-block:nth-child(even) .caption::after {
+    @apply left-1/2;
+  }
+
+  .how-works-block .title {
+    @apply mb-8 text-5xl;
+  }
+
+  .how-works-block .description {
+    @apply text-2xl;
+  }
+}
+
+/* Testimonials */
+.testimonials-slider {
+  @apply static;
+}
+
+.testimonials-slider .swiper-slide {
+  @apply h-auto;
+}
+
+.testimonials-slider .swiper-button-prev,
+.testimonials-slider .swiper-button-next {
+  @apply absolute top-full right-0 left-auto z-10 translate-y-9 after:content-[''];
+}
+
+.testimonials-slider .swiper-button-prev {
+  @apply -translate-x-12;
+}
+
+.testimonials-slide {
+  @apply h-full flex-1 rounded-2xl border border-doctorchat-blue px-12 pt-6 pb-7;
+}
+
+.testimonials-slide .title {
+  @apply mb-4 text-3xl font-bold text-doctorchat-mint;
+}
+
+.testimonials-slide .description {
+  @apply text-doctorchat-gray;
+}
+
+@screen lg {
+  .testimonials-slide {
+    @apply pb-9;
+  }
+
+  .testimonials-slide .title {
+    @apply mb-5 text-2xl;
+  }
+
+  .testimonials-slide .description {
+    @apply text-2xl;
+  }
+}
+
+@screen xl {
+  .testimonials-slider {
+    @apply mx-16;
+  }
+
+  .testimonials-slider .swiper-button-prev,
+  .testimonials-slider .swiper-button-next {
+    @apply top-1/2 translate-y-0;
+  }
+
+  .testimonials-slider .swiper-button-prev {
+    @apply right-full left-0 translate-x-0;
+  }
+}
+
+/* Blog */
+.blogs-list {
+  @apply space-y-16;
+}
+
+.blog {
+  @apply flex flex-col-reverse;
+}
+
+.blog .preview {
+  @apply mb-7 flex max-h-96 items-center justify-center overflow-hidden;
+}
+
+.blog .preview img {
+  @apply w-full object-cover;
+}
+
+.blog .caption {
+  @apply px-5;
+}
+
+.blog .title {
+  @apply mb-5 text-4xl font-bold text-doctorchat-mint hover:underline;
+}
+
+.blog .description {
+  @apply mb-10 text-doctorchat-gray;
+}
+
+@screen lg {
+  .blogs-list {
+    @apply space-y-0;
+  }
+
+  .blog {
+    @apply grid grid-cols-2 place-items-center;
+  }
+
+  .blog .caption {
+    @apply flex max-w-[628px] flex-col items-center justify-center p-5;
+  }
+
+  .blog:nth-child(even) .caption {
+    @apply order-2;
+  }
+
+  .blog .preview {
+    @apply mb-0 h-full max-h-full w-full;
+  }
+
+  .blog .title {
+    @apply mb-7 text-3xl;
+  }
+
+  .blog .description {
+    @apply mb-0 text-xl;
+  }
+
+  .blog button {
+    @apply hidden;
+  }
+}
+
+@screen xl {
+  .blog .preview {
+    @apply max-h-[740px];
+  }
+
+  .blog .title {
+    @apply mb-7 text-5xl;
+  }
+
+  .blog .description {
+    @apply mb-0 text-2xl;
+  }
+}
