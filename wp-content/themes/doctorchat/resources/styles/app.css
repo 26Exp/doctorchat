@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 body.home .doctorchat-header {
-  @apply bg-transparent;
+  @apply bg-transparent absolute;
 }
 
 /* Globals */
@@ -410,7 +410,7 @@ article.blog .description {
 
 /* Page Header */
 .page-header {
-  @apply bg-doctorchat-mint bg-cover bg-center bg-no-repeat pt-[100px] text-white;
+  @apply bg-doctorchat-mint bg-cover bg-center bg-no-repeat text-white;
 }
 
 .page-header-content {
@@ -419,12 +419,6 @@ article.blog .description {
 
 .page-header h1 {
   @apply text-7xl font-bold;
-}
-
-@screen md {
-  .page-header {
-    @apply pt-[165px];
-  }
 }
 
 /* Actual Blog */
