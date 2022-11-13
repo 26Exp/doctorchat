@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body.home .doctorchat-header {
+  @apply bg-transparent;
+}
+
 /* Globals */
 .dc-container {
   @apply mx-auto max-w-screen-2xl px-5 md:px-10;
