@@ -43,7 +43,7 @@
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-3"
               >
-                <img src="@asset('svgs/facebook.svg')" alt="Facebook" />
+                <img src="@asset('svgs/facebook-f.svg')" alt="Facebook" />
               </div>
             </a>
             <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
