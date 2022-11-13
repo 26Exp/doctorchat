@@ -10,10 +10,33 @@
       <div class="flex justify-between space-x-7 text-white lg:space-x-12 xl:space-x-28">
         <div class="max-w-xs space-y-4">
           @php(dynamic_sidebar('footer-one'))
+          <div class="!mt-8 flex space-x-6 lg:!mt-10 lg:space-x-10">
+            <a href="https://www.facebook.com/doctorchat.md" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+              >
+                <img src="@asset('svgs/viber.svg')" alt="Viber" />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/doctorchat.md/" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+              >
+                <img src="@asset('svgs/whatsapp.svg')" alt="Whatsapp" />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+              >
+                <img src="@asset('svgs/telegram.svg')" alt="Telegram" />
+              </div>
+            </a>
+          </div>
         </div>
         <div class="space-y-4">
           @php(dynamic_sidebar('footer-two'))
-          @php(wp_nav_menu(['theme_location' => 'footer-menu', 'menu_class' => 'list-disc pl-5 !mt-0']))
+          @php(wp_nav_menu(['theme_location' => 'footer-menu', 'menu_class' => 'list-disc pl-5 !-mt-4']))
         </div>
       </div>
     </div>

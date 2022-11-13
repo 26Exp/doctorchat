@@ -1,8 +1,4 @@
 <header class="absolute top-0 left-0 z-20 w-full">
-  <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
-  </a>
-
   <div class="dc-container">
     <div class="flex items-center justify-between py-8 md:py-16">
       <a href="{{ home_url('/') }}">
