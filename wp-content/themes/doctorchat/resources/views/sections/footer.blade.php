@@ -10,26 +10,47 @@
       <div class="flex justify-between space-x-7 text-white lg:space-x-12 xl:space-x-28">
         <div class="max-w-xs space-y-4">
           @php(dynamic_sidebar('footer-one'))
-          <div class="!mt-8 flex space-x-6 lg:!mt-10 lg:space-x-10">
+          <div class="!mt-4 inline-grid grid-cols-3 gap-3 md:grid-cols-6 lg:!mt-6">
             <a href="https://www.facebook.com/doctorchat.md" target="_blank">
               <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2"
               >
                 <img src="@asset('svgs/viber.svg')" alt="Viber" />
               </div>
             </a>
             <a href="https://www.instagram.com/doctorchat.md/" target="_blank">
               <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2"
               >
                 <img src="@asset('svgs/whatsapp.svg')" alt="Whatsapp" />
               </div>
             </a>
             <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
               <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2 lg:h-16 lg:w-16 lg:p-3"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2"
               >
                 <img src="@asset('svgs/telegram.svg')" alt="Telegram" />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2"
+              >
+                <img src="@asset('svgs/linkedin-in.svg')" alt="Linkedin" />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-3"
+              >
+                <img src="@asset('svgs/facebook.svg')" alt="Facebook" />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/doctorchat.md/" target="_blank">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white p-2"
+              >
+                <img src="@asset('svgs/instagram.svg')" alt="Instagram" />
               </div>
             </a>
           </div>

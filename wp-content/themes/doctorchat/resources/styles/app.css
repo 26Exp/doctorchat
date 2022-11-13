@@ -403,3 +403,104 @@
     @apply mb-0 text-2xl;
   }
 }
+
+/* Page Header */
+.page-header {
+  @apply bg-doctorchat-mint bg-cover bg-center bg-no-repeat pt-[100px] text-white;
+}
+
+.page-header-content {
+  @apply py-14 pb-20;
+}
+
+.page-header h1 {
+  @apply text-7xl font-bold;
+}
+
+@screen md {
+  .page-header {
+    @apply pt-[165px];
+  }
+}
+
+/* Actual Blog */
+.actual-blogs-list {
+  @apply mt-5 grid gap-5;
+}
+
+.actual-blog {
+  @apply flex overflow-hidden rounded-md shadow-md;
+}
+
+.actual-blog-preview {
+  @apply flex max-h-60 items-center justify-center overflow-hidden;
+}
+
+.actual-blog-preview img {
+  @apply w-full object-cover;
+}
+
+.actual-blog-caption {
+  @apply py-4 px-5;
+}
+
+.atual-blog-cateogry {
+  @apply mb-3 block font-bold uppercase tracking-wide text-doctorchat-red;
+}
+
+.actual-blog-title {
+  @apply mb-3 text-2xl font-bold text-doctorchat-gray;
+}
+
+.actual-blog-description {
+  @apply text-doctorchat-gray;
+}
+
+.actual-blog-meta {
+  @apply mb-3 flex items-center space-x-3 text-doctorchat-gray;
+}
+
+.actual-blog-meta span:not(:last-of-type) {
+  @apply relative pr-3;
+}
+
+.actual-blog-meta span:not(:last-of-type)::after {
+  @apply absolute left-full top-1/2 h-1 w-1 -translate-y-1/2 -translate-x-1/2 rounded-full bg-doctorchat-gray content-[''];
+}
+
+@screen md {
+  .actual-blogs-list {
+    @apply auto-rows-auto grid-cols-2 gap-6;
+  }
+
+  .actual-blog-preview {
+    @apply max-h-72;
+  }
+
+  /* Large Blog */
+  .actual-blog.large {
+    @apply col-span-2 max-h-96;
+  }
+
+  .actual-blog.large article {
+    @apply flex;
+  }
+
+  .actual-blog.large .actual-blog-caption {
+    @apply flex flex-col justify-center;
+  }
+
+  .actual-blog.large .actual-blog-preview {
+    @apply max-h-max;
+  }
+}
+
+@screen xl {
+  .actual-blogs-list {
+    @apply grid-cols-3;
+  }
+
+  .actual-blog.large {
+    @apply col-span-3;
+  }
+}
