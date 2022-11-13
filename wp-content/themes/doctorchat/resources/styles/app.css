@@ -332,27 +332,27 @@
   @apply space-y-16;
 }
 
-.blog {
+article.blog {
   @apply flex flex-col-reverse;
 }
 
-.blog .preview {
+article.blog .preview {
   @apply mb-7 flex max-h-96 items-center justify-center overflow-hidden;
 }
 
-.blog .preview img {
+article.blog .preview img {
   @apply w-full object-cover;
 }
 
-.blog .caption {
+article.blog .caption {
   @apply px-5;
 }
 
-.blog .title {
+article.blog .title {
   @apply mb-5 text-4xl font-bold text-doctorchat-mint hover:underline;
 }
 
-.blog .description {
+article.blog .description {
   @apply mb-10 text-doctorchat-gray;
 }
 
@@ -361,45 +361,45 @@
     @apply space-y-0;
   }
 
-  .blog {
+  article.blog {
     @apply grid grid-cols-2 place-items-center;
   }
 
-  .blog .caption {
+  article.blog .caption {
     @apply flex max-w-[628px] flex-col items-center justify-center p-5;
   }
 
-  .blog:nth-child(even) .caption {
+  article.blog:nth-child(even) .caption {
     @apply order-2;
   }
 
-  .blog .preview {
+  article.blog .preview {
     @apply mb-0 h-full max-h-full w-full;
   }
 
-  .blog .title {
+  article.blog .title {
     @apply mb-7 text-3xl;
   }
 
-  .blog .description {
+  article.blog .description {
     @apply mb-0 text-xl;
   }
 
-  .blog button {
+  article.blog button {
     @apply hidden;
   }
 }
 
 @screen xl {
-  .blog .preview {
+  article.blog .preview {
     @apply max-h-[740px];
   }
 
-  .blog .title {
+  article.blog .title {
     @apply mb-7 text-5xl;
   }
 
-  .blog .description {
+  article.blog .description {
     @apply mb-0 text-2xl;
   }
 }
