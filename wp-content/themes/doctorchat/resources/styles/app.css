@@ -7,14 +7,6 @@
   @apply mx-auto max-w-screen-2xl px-5 md:px-10;
 }
 
-.navigation-link {
-  @apply text-2xl text-white transition-colors hover:text-gray-200;
-}
-
-.mobile-navigation-link {
-  @apply block text-2xl font-bold text-doctorchat-blue transition-colors hover:text-doctorchat-blue/70;
-}
-
 .btn {
   @apply flex items-center justify-center rounded-full bg-doctorchat-red font-bold text-white transition-colors hover:bg-doctorchat-red/80;
 }
@@ -57,20 +49,52 @@
   }
 }
 
+/* Navigation */
+.navigation-link {
+  @apply inline-block text-xl text-white transition-colors hover:text-gray-200;
+}
+
+.navigation {
+  @apply flex items-center space-x-8;
+}
+
+.navigation a {
+  @apply inline-block text-xl text-white transition-colors hover:text-gray-200;
+}
+
+@screen 2xl {
+  .navigation {
+    @apply space-x-12;
+  }
+
+  .navigation a,
+  .navigation-link {
+    @apply text-2xl;
+  }
+}
+
 /* Mobile Navigation */
+.mobile-navigation-link {
+  @apply block text-2xl font-bold text-doctorchat-blue transition-colors hover:text-doctorchat-blue/70;
+}
+
 .mobile-navigation {
-  @apply fixed top-0 right-0 z-50 h-full w-1/2 max-w-sm translate-x-full transform bg-white px-5 py-12 transition-all opacity-0 duration-150 will-change-transform;
+  @apply fixed top-0 right-0 z-50 h-full w-1/2 max-w-sm translate-x-full transform bg-white px-5 py-12 opacity-0 transition-all duration-150 will-change-transform;
 }
 
 .mobile-navigation.open {
   @apply translate-x-0 opacity-100;
 }
 
-.mobile-navigation nav {
+.mobile-navigation-nav {
   @apply space-y-6 text-right;
 }
 
-.mobile-navigation .with-separator:not(:last-of-type) {
+.mobile-navigation-nav a {
+  @apply block text-2xl font-bold text-doctorchat-blue transition-colors hover:text-doctorchat-blue/70;
+}
+
+.mobile-navigation-nav li:not(:last-of-type) {
   @apply border-b border-b-doctorchat-mint pb-6;
 }
 
