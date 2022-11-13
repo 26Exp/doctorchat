@@ -32,16 +32,15 @@
 
 <div id="mobile-menu" class="block xl:hidden">
   <div class="mobile-navigation">
-    <nav>
-      <div class="mb-9 flex items-end justify-end space-x-3">
-        <a class="mobile-navigation-link" href="#ro">Ro</a>
-        <a class="mobile-navigation-link !font-normal" href="#ru">Ru</a>
-      </div>
-      <a class="mobile-navigation-link with-separator" href="#how-it-works">Cum functioneaza</a>
-      <a class="mobile-navigation-link with-separator" href="#online-doctors">Doctori Online</a>
-      <a class="mobile-navigation-link with-separator" href="#for-doctors">Pentru Doctori</a>
-      <a class="mobile-navigation-link with-separator" href="#blog">Blog</a>
-    </nav>
+    @if (has_nav_menu('primary_navigation'))
+      <nav aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+        <div class="mb-9 flex items-end justify-end space-x-3">
+          <a class="mobile-navigation-link" href="#ro">Ro</a>
+          <a class="mobile-navigation-link !font-normal" href="#ru">Ru</a>
+        </div>
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'mobile-navigation-link with-separator', 'echo' => false]) !!}
+      </nav>
+    @endif
   </div>
   <div class="mobile-navigation-backdrop"></div>
 </div>
