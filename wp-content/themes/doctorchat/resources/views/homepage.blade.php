@@ -41,7 +41,7 @@
   <!-- Hero Section End -->
 
   <!-- Highlights Section Start -->
-  <section class="py-1 lg:py-5">
+  <section class="pt-14 pb-1 lg:pt-36 lg:pb-5">
     <div class="dc-container">
       <div
         class="flex flex-col items-center space-x-0 space-y-5 lg:flex-row lg:items-stretch lg:space-y-0 lg:space-x-8 xl:space-x-11"

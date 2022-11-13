@@ -11,6 +11,10 @@
   @apply text-2xl text-white transition-colors hover:text-gray-200;
 }
 
+.mobile-navigation-link {
+  @apply block text-2xl font-bold text-doctorchat-blue transition-colors hover:text-doctorchat-blue/70;
+}
+
 .btn {
   @apply flex items-center justify-center rounded-full bg-doctorchat-red font-bold text-white transition-colors hover:bg-doctorchat-red/80;
 }
@@ -51,6 +55,31 @@
   .banner-with-bg {
     background-size: 110%;
   }
+}
+
+/* Mobile Navigation */
+.mobile-navigation {
+  @apply fixed top-0 right-0 z-50 h-full w-1/2 max-w-sm translate-x-full transform bg-white px-5 py-12 transition-all opacity-0 duration-150 will-change-transform;
+}
+
+.mobile-navigation.open {
+  @apply translate-x-0 opacity-100;
+}
+
+.mobile-navigation nav {
+  @apply space-y-6 text-right;
+}
+
+.mobile-navigation .with-separator:not(:last-of-type) {
+  @apply border-b border-b-doctorchat-mint pb-6;
+}
+
+.mobile-navigation-backdrop {
+  @apply pointer-events-none fixed top-0 left-0 z-40 h-full w-full bg-black/50 opacity-0 transition-opacity duration-150;
+}
+
+.mobile-navigation.open ~ .mobile-navigation-backdrop {
+  @apply pointer-events-auto opacity-100;
 }
 
 /* Highlights Section */

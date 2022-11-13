@@ -1,7 +1,7 @@
 <footer class="bg-[#92D4D2]">
   <div class="dc-container py-8 lg:py-28">
     <div class="space-y-12 lg:flex lg:justify-between lg:space-y-0 lg:space-x-16 lg:px-11">
-      <a href="/">
+      <a href="{{ home_url('/') }}">
         <picture>
           <source media="(min-width: 1024px)" srcset="@asset('svgs/logo-vertical.svg')"/>
           <img src="@asset('svgs/logo.svg')" alt="DoctorChat Logo"/>

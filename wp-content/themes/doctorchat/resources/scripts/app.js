@@ -20,8 +20,33 @@ const main = async (err) => {
 domReady(main);
 import.meta.webpackHot?.accept(main);
 
-// Testimonials Slider
-document.addEventListener("DOMContentLoaded", () => {
+function mobileNavigation() {
+  const tirgger = document.querySelector("#mobile-menu-tirgger");
+  const menu = document.querySelector("#mobile-menu .mobile-navigation");
+  const backdrop = document.querySelector(
+    "#mobile-menu .mobile-navigation-backdrop"
+  );
+
+  tirgger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+
+  backdrop.addEventListener("click", () => {
+    menu.classList.remove("open");
+  });
+
+  document.addEventListener("keyup", (e) => {
+    if (e.code === "Escape") {
+      menu.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("scroll", () => {
+    menu.classList.remove("open");
+  });
+}
+
+function testimonialsSlider() {
   new Swiper("#testimonials", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -40,5 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-})
+}
 
+window.addEventListener("DOMContentLoaded", () => {
+  mobileNavigation();
+  testimonialsSlider();
+});
