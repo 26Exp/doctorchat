@@ -125,3 +125,8 @@ function disable_real_mime_check( $data, $file, $filename, $mimes ) {
 }
 add_filter( 'wp_check_filetype_and_ext', 'disable_real_mime_check', 10, 4 );
 
+function dm_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
+
