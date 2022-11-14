@@ -88,7 +88,7 @@
             <p class="description">{!! get_field('register')['content'] !!}</p>
           </div>
           <div class="preview">
-            <img src="@asset('images/how-works-1.png')" alt="{{ get_field('register')['heading'] }}" />
+            <img src="{{ get_field('register')['image'] }}" alt="{{ get_field('register')['heading'] }}" />
           </div>
         </div>
         <div class="how-works-block">
@@ -97,7 +97,7 @@
             <p class="description">{!! get_field('select_doctor')['content'] !!}</p>
           </div>
           <div class="preview">
-            <img src="@asset('images/how-works-2.png')" alt="{{ get_field('select_doctor')['heading'] }}" />
+            <img src="{{ get_field('select_doctor')['image'] }}" alt="{{ get_field('select_doctor')['heading'] }}" />
           </div>
         </div>
         <div class="how-works-block">
@@ -106,7 +106,7 @@
             <p class="description">{!! get_field('describe_problem')['content'] !!}</p>
           </div>
           <div class="preview">
-            <img src=@asset('images/how-works-3.png')" alt="{{ get_field('describe_problem')['heading'] }}" />
+            <img src="{{ get_field('describe_problem')['image'] }}" alt="{{ get_field('describe_problem')['heading'] }}" />
           </div>
         </div>
         <div class="how-works-block">
@@ -115,7 +115,7 @@
             <p class="description">{!! get_field('complete_investigation')['content'] !!}</p>
           </div>
           <div class="preview">
-            <img src="@asset('images/how-works-1.png')" alt="{{ get_field('complete_investigation')['heading'] }}" />
+            <img src="{{ get_field('complete_investigation')['image'] }}" alt="{{ get_field('complete_investigation')['heading'] }}" />
           </div>
         </div>
         <div class="how-works-block">
@@ -124,7 +124,7 @@
             <p class="description">{{ get_field('pay')['content'] }}</p>
           </div>
           <div class="preview">
-            <img src="@asset('images/how-works-5.png')" alt="{{ get_field('pay')['heading'] }}" />
+            <img src="{{ get_field('pay')['image'] }}" alt="{{ get_field('pay')['heading'] }}" />
           </div>
         </div>
       </main>
