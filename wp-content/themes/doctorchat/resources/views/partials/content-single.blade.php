@@ -1,5 +1,5 @@
-<div class="max-w-3xl mx-auto my-7">
-  <article @php(post_class('prose prose-doctorchat-mint py-7 px-5 prose-doctorchat-mint md:prose-xl'))>
+<div class="max-w-4xl mx-auto my-7">
+  <article @php(post_class('prose prose-doctorchat-mint py-7 prose-doctorchat-mint md:px-5 md:prose-xl'))>
     <header>
       <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'full') }}" alt="{{ get_the_title() }}" />
       <h1 class="entry-title">

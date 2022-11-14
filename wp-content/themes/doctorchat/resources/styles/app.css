@@ -442,7 +442,7 @@ article.blog .description {
   @apply py-4 px-5;
 }
 
-.actual-blog-cateogry {
+.actual-blog-category {
   @apply mb-3 block font-bold uppercase tracking-wide text-doctorchat-red;
 }
 
