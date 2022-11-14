@@ -114,10 +114,3 @@ function SearchFilter($query) {
 }
 add_filter('pre_get_posts','SearchFilter');
 
-function social_media_icons() {
-    ob_start();
-    get_template_part('components/sso');
-    return ob_get_clean();
-}
-add_shortcode('sso', 'social_media_icons');
-
