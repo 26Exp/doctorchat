@@ -27,7 +27,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5ZWSFM"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
