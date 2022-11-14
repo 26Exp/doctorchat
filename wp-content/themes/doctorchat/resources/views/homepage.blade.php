@@ -7,7 +7,7 @@
 @section('content')
   <!-- Hero Section Start -->
   <section
-    class="relative h-screen bg-cover bg-center bg-no-repeat pt-[10vh]"
+    class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center"
     style="background-image: url({{ asset('images/hero-section.jpg') }})"
   >
     <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div  >
@@ -157,7 +157,7 @@
   </section>
   <!-- Banner End -->
 
-  <!-- Testiomians Start -->
+  <!-- Testimonials Start -->
   <section class="py-14 pb-24 lg:py-36">
     <div class="dc-container">
       <header>
@@ -188,7 +188,7 @@
       </main>
     </div>
   </section>
-  <!-- Testiomians End -->
+  <!-- Testimonials End -->
 
   <!-- Banner Start -->
   <section class="banner banner-with-bg relative bg-[#92D4D2]/50 bg-cover bg-center bg-no-repeat">
