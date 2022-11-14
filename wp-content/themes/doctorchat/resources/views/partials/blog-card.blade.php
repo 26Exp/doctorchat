@@ -1,5 +1,5 @@
 <a class="actual-blog @if($i == 1) large @endif " href="{{ the_permalink() }}">
-  <article class="mx-5 prose prose-doctorchat-mint md:prose-xl">
+  <article>
     <div class="actual-blog-preview">
       <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'full') }}" alt="{{ get_the_title() }}" />
     </div>

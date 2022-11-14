@@ -1,5 +1,5 @@
 <div class="max-w-3xl mx-auto my-7">
-  <article @php(post_class('prose prose-xl prose-doctorchat-mint py-7'))>
+  <article @php(post_class('prose prose-xl prose-doctorchat-mint py-7 mx-5 prose prose-doctorchat-mint md:prose-xl'))>
     <header>
       <h1 class="entry-title">
         {!! $title !!}
