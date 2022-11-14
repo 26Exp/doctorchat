@@ -106,7 +106,6 @@ function register_footer_menu() {
 }
 add_action( 'init', 'register_footer_menu' );
 
-// exclude pages from search results wordpress
 function SearchFilter($query) {
     if ($query->is_search) {
         $query->set('post_type', 'post');

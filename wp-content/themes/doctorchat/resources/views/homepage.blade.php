@@ -76,7 +76,7 @@
   <!-- Separator End -->
 
   <!-- How it works Section Start -->
-  <section class="pb-14 pt-1 lg:pb-36 lg:pt-5">
+  <section class="pb-14 pt-1 lg:pb-36 lg:pt-5" id="how-it-works">
     <div class="dc-container">
       <header>
         <h2 class="section-title mb-12 md:mb-24 lg:mb-40">{{ get_field('heading') }}</h2>
