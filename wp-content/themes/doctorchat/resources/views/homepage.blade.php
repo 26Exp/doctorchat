@@ -139,7 +139,7 @@
 
   <!-- Banner Start -->
   <section
-    class="banner relative bg-cover bg-center bg-no-repeat"
+    class="banner relative bg-cover bg-[center_right_25%] bg-no-repeat md:bg-center"
     style="background-image: url('{{ asset('images/banner.jpg') }}')">
     <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/60"></div>
     <div class="dc-container h-full">
