@@ -36,6 +36,13 @@ jobs:
             yarn
             yarn build
             cd ../../..
+            
+            # Clear cache
+            wp rocket clean --confirm --allow-root
+            
+            # Preload cache
+            wp rocket preload --allow-root
+            
             # Exit maintenance mode
             wp maintenance-mode deactivate --allow-root
       
