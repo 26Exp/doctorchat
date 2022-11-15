@@ -12,12 +12,12 @@
         <div class="dc-container relative z-10 h-full w-full">
             <div class="flex h-full w-full flex-col justify-center">
                 <header class="mb-7 lg:mb-12">
-                    <h1 class="mb-3 text-6xl font-bold uppercase text-white lg:text-8xl">
+                    <h1 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
                         {{ get_field('h1_intro') }}
                     </h1>
-                    <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
+                    <h2 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
                         {{ get_field('sub_header_text') }}
-                    </h3>
+                    </h2>
                 </header>
                 <main>
                     <div class="max-w-4xl pl-5 lg:pl-8">
@@ -64,7 +64,7 @@
     <!-- Highlights Section End -->
 
     <!-- Separator Start -->
-    <div class="flex items-center justify-center px-2 py-14 md:py-28">
+    <div class="flex items-center justify-center px-5 py-14 md:px-8 md:py-28 lg:px-14 xl:px-20">
         <picture>
             <source media="(min-width: 768px)" srcset="@asset('svgs/section-separator.svg')" />
             <img src="@asset('svgs/section-separator-mobile.svg')" alt="DoctorChat Logo" />
@@ -232,7 +232,7 @@
     <!-- Blogs End -->
 
     <!-- Separator Start -->
-    <div class="flex items-center justify-center px-2 py-14 md:py-28">
+    <div class="flex items-center justify-center px-5 py-14 md:px-8 md:py-28 lg:px-14 xl:px-20">
         <picture>
             <source media="(min-width: 768px)" srcset="@asset('svgs/section-separator.svg')" />
             <img src="@asset('svgs/section-separator-mobile.svg')" alt="DoctorChat Logo" />

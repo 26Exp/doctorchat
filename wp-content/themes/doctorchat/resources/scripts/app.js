@@ -59,7 +59,7 @@ function testimonialsSlider() {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      1200: {
+      1500: {
         slidesPerView: 3,
         spaceBetween: 20,
       },

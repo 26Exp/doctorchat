@@ -8,7 +8,7 @@ body.home .doctorchat-header {
 
 /* Globals */
 .dc-container {
-  @apply mx-auto max-w-screen-2xl px-5 md:px-10;
+  @apply mx-auto max-w-screen-2xl px-5 md:px-8 xl:px-20 lg:px-14;
 }
 
 .btn {
@@ -83,7 +83,7 @@ body.home .doctorchat-header {
 }
 
 .mobile-navigation {
-  @apply fixed top-0 right-0 z-50 h-full w-1/2 max-w-sm translate-x-full transform bg-white px-5 py-12 opacity-0 transition-all duration-150 will-change-transform;
+  @apply fixed top-0 right-0 z-50 h-full w-3/4 max-w-sm translate-x-full transform bg-white px-5 py-12 opacity-0 transition-all duration-150 will-change-transform;
 }
 
 .mobile-navigation.open {
@@ -418,7 +418,7 @@ article.blog .description {
 }
 
 .page-header h1 {
-  @apply text-7xl font-bold;
+  @apply text-5xl font-bold;
 }
 
 /* Actual Blog */
