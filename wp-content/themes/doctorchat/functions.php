@@ -88,6 +88,7 @@ function footer_widget_one() {
         'after_title' => '',
     ) );
 }
+
 function footer_widget_two() {
     register_sidebar( array(
         'name' => 'Footer 2',
@@ -98,6 +99,7 @@ function footer_widget_two() {
         'after_title' => '',
     ) );
 }
+
 add_action( 'widgets_init', 'footer_widget_one' );
 add_action( 'widgets_init', 'footer_widget_two' );
 

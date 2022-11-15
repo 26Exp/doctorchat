@@ -216,7 +216,7 @@
             @foreach (get_field('blog_posts') as $blog)
                 <article class="blog">
                     <div class="caption">
-                        <a href="{{ get_the_permalink($blog['post']->ID) }}">
+                        <a class="block w-full" href="{{ get_the_permalink($blog['post']->ID) }}">
                             <h3 class="title">{{ get_the_title($blog['post']->ID) }}</h3>
                         </a>
                         <p class="description">{{ $blog['short_description'] }}</p>

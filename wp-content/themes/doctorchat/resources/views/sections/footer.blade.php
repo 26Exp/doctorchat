@@ -8,7 +8,7 @@
         </picture>
       </a>
       <div class="flex justify-between space-x-7 text-white lg:space-x-12 xl:space-x-28">
-        <div class="max-w-xs space-y-4">
+        <div class="max-w-xs [&>div[class$='widget']]:space-y-4">
           @php(dynamic_sidebar('footer-one'))
           <div class="!mt-4 inline-grid grid-cols-3 gap-3 md:grid-cols-6 lg:!mt-6">
             <a href="viber://chat?number=+37378272887" target="_blank">
