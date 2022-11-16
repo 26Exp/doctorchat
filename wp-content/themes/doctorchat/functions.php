@@ -132,3 +132,44 @@ function dm_remove_wp_block_library_css(){
 }
 add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
 
+
+function get_speciality(): array
+{
+    $args = array(
+        'post_type' => 'doctors',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'speciality',
+                'field' => 'slug',
+                'terms' => get_queried_object()->slug,
+            ),
+        ),
+        'posts_per_page' => -1,
+    );
+    $query = new WP_Query($args);
+
+    return $query->get_posts();
+}
+
+function get_all_specialities(): array
+{
+    // get all terms from speciality taxonomy
+    $terms = get_terms('speciality', array(
+        'hide_empty' => false,
+    ));
+
+
+    $specialities = [];
+    foreach ($terms as $term) {
+        $specialities[] = [
+            'name' => $term->name,
+            'slug' => $term->slug,
+            'count' => $term->count,
+            'is_active' => get_queried_object()->slug === $term->slug,
+            'permalink' => get_term_link($term),
+        ];
+    }
+
+    return $specialities;
+}
+
