@@ -1,4 +1,4 @@
-<footer class="bg-[#92D4D2]">
+<footer class="bg-doctorchat-turquoise">
   <div class="dc-container py-8 lg:py-28">
     <div class="space-y-12 lg:flex lg:justify-between lg:space-y-0 lg:space-x-16 lg:px-11">
       <a href="{{ home_url('/') }}">

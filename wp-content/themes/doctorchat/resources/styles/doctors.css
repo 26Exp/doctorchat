@@ -7,15 +7,15 @@
 }
 
 .categories-nav {
-  @apply flex flex-col space-y-6 min-w-[267px];
+  @apply flex flex-col min-w-[267px] space-y-2;
 }
 
 .categories-link {
-  @apply text-doctorchat-gray text-2xl py-5 px-4 whitespace-nowrap border-2 border-doctorchat-mint rounded-2xl transition-colors hover:bg-doctorchat-mint/30;
+  @apply text-doctorchat-gray text-xl py-3 px-4 border-2 border-doctorchat-turquoise rounded-2xl transition-colors hover:bg-doctorchat-turquoise/40;
 }
 
 .categories-link.active {
-  @apply bg-doctorchat-mint text-white;
+  @apply bg-doctorchat-turquoise text-white;
 }
 
 .doctors-grid {
@@ -39,7 +39,7 @@
 }
 
 .doctor-name {
-  @apply text-2xl text-doctorchat-mint font-bold;
+  @apply text-2xl text-doctorchat-turquoise font-bold;
 }
 
 .doctor-category {
@@ -47,7 +47,7 @@
 }
 
 .doctor-meta {
-  @apply flex items-center space-x-5 mb-5;
+  @apply flex items-center space-x-5;
 }
 
 .doctor-meta-item {
@@ -58,13 +58,9 @@
   @apply w-8;
 }
 
-.doctor-details-btn {
-  @apply py-2 px-4 ml-auto rounded-full border-2 border-doctorchat-mint text-lg text-doctorchat-gray font-bold transition-colors hover:bg-doctorchat-mint/30;
-}
-
 /* Mobile Categories */
 .mobile-categories-trigger {
-  @apply flex items-center justify-center space-x-2 py-2 px-5 ml-auto text-lg rounded-full border-2 border-doctorchat-mint text-doctorchat-gray font-medium transition-colors hover:bg-doctorchat-mint/30;
+  @apply flex items-center justify-center space-x-2 py-2 px-5 ml-auto text-lg rounded-full border-2 border-doctorchat-turquoise text-doctorchat-gray font-medium transition-colors hover:bg-doctorchat-turquoise/40;
 }
 
 .mobile-categories-trigger img {

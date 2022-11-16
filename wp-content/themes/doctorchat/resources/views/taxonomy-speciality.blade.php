@@ -52,9 +52,6 @@
                                         <span>320 mdl</span>
                                     </div>
                                 </div>
-                                <button class="doctor-details-btn">
-                                    Află mai multe
-                                </button>
                         </article>
                     </a>
                     <a href="#">
@@ -80,9 +77,6 @@
                                         <span>320 mdl</span>
                                     </div>
                                 </div>
-                                <button class="doctor-details-btn">
-                                    Află mai multe
-                                </button>
                         </article>
                     </a>
                     <a href="#">
@@ -108,9 +102,6 @@
                                         <span>320 mdl</span>
                                     </div>
                                 </div>
-                                <button class="doctor-details-btn">
-                                    Află mai multe
-                                </button>
                         </article>
                     </a>
                     <a href="#">
@@ -136,9 +127,6 @@
                                         <span>320 mdl</span>
                                     </div>
                                 </div>
-                                <button class="doctor-details-btn">
-                                    Află mai multe
-                                </button>
                         </article>
                     </a>
                 </div>

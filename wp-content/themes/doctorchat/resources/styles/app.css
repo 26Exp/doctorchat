@@ -101,7 +101,7 @@ body.home .doctorchat-header {
 }
 
 .mobile-navigation-nav li:not(:last-of-type) {
-  @apply border-b border-b-doctorchat-mint pb-6;
+  @apply border-b border-b-doctorchat-turquoise pb-6;
 }
 
 .mobile-navigation-backdrop {
@@ -195,7 +195,7 @@ body.home .doctorchat-header {
 }
 
 .how-works-block .title {
-  @apply mb-4 text-2xl font-extrabold text-doctorchat-mint;
+  @apply mb-4 text-2xl font-extrabold text-doctorchat-turquoise;
 }
 
 .how-works-block .description {
@@ -297,7 +297,7 @@ body.home .doctorchat-header {
 }
 
 .testimonials-slide .title {
-  @apply mb-4 text-3xl font-bold text-doctorchat-mint;
+  @apply mb-4 text-3xl font-bold text-doctorchat-turquoise;
 }
 
 .testimonials-slide .description {
@@ -355,7 +355,7 @@ article.blog .caption {
 }
 
 article.blog .title {
-  @apply mb-5 text-4xl font-bold text-doctorchat-mint hover:underline;
+  @apply mb-5 text-4xl font-bold text-doctorchat-turquoise hover:underline;
 }
 
 article.blog .description {
@@ -412,7 +412,7 @@ article.blog .description {
 
 /* Page Header */
 .page-header {
-  @apply bg-doctorchat-mint bg-cover bg-center bg-no-repeat text-white;
+  @apply bg-doctorchat-turquoise bg-cover bg-center bg-no-repeat text-white;
 }
 
 .page-header-content {
