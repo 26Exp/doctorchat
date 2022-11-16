@@ -48,9 +48,6 @@ jobs:
       
             # Reload PHP to update opcache
             echo "" | sudo -S service php-fpm-81 reload
-            
-            # Got up
-            php artisan up
               
             echo "✅✅✅ Application deployed!"
           host: ${{ secrets.SSH_HOST }}
