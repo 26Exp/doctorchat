@@ -81,7 +81,7 @@
             <main class="how-works-section">
                 <div class="how-works-block">
                     <div class="caption">
-                        <h4 class="title">{{ get_field('register')['heading'] }}</h4>
+                        <h3 class="title">{{ get_field('register')['heading'] }}</h3>
                         <p class="description">{!! get_field('register')['content'] !!}</p>
                     </div>
                     <div class="preview">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="how-works-block">
                     <div class="caption">
-                        <h4 class="title">{{ get_field('select_doctor')['heading'] }}</h4>
+                        <h3 class="title">{{ get_field('select_doctor')['heading'] }}</h3>
                         <p class="description">{!! get_field('select_doctor')['content'] !!}</p>
                     </div>
                     <div class="preview">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="how-works-block">
                     <div class="caption">
-                        <h4 class="title">{{ get_field('describe_problem')['heading'] }}</h4>
+                        <h3 class="title">{{ get_field('describe_problem')['heading'] }}</h3>
                         <p class="description">{!! get_field('describe_problem')['content'] !!}</p>
                     </div>
                     <div class="preview">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="how-works-block">
                     <div class="caption">
-                        <h4 class="title">{{ get_field('complete_investigation')['heading'] }}</h4>
+                        <h3 class="title">{{ get_field('complete_investigation')['heading'] }}</h3>
                         <p class="description">{!! get_field('complete_investigation')['content'] !!}</p>
                     </div>
                     <div class="preview">
@@ -120,7 +120,7 @@
                 </div>
                 <div class="how-works-block">
                     <div class="caption">
-                        <h4 class="title">{{ get_field('pay')['heading'] }}</h4>
+                        <h3 class="title">{{ get_field('pay')['heading'] }}</h3>
                         <p class="description">{{ get_field('pay')['content'] }}</p>
                     </div>
                     <div class="preview">
@@ -144,8 +144,8 @@
         <div class="dc-container h-full">
             <div class="relative z-10 flex h-full flex-col items-start justify-center py-28 px-4">
                 <header>
-                    <h2 class="mb-4 text-2xl font-bold text-white md:mb-8 md:text-4xl">
-                        {{ get_field('be_healthy_heading') }}</h2>
+                    <h3 class="mb-4 text-2xl font-bold text-white md:mb-8 md:text-4xl">
+                        {{ get_field('be_healthy_heading') }}</h3>
                 </header>
                 <main>
                     <p class="max-w-[610px] text-lg text-white md:text-2xl">
