@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "doctors.css";
+
 body.home .doctorchat-header {
   @apply bg-transparent absolute;
 }

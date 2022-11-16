@@ -67,7 +67,34 @@ function testimonialsSlider() {
   });
 }
 
+function doctorsCategories() {
+  const tirgger = document.querySelector("#mobile-categories-trigger");
+  const menu = document.querySelector("#mobile-categories .mobile-categories");
+  const backdrop = document.querySelector(
+    "#mobile-categories .mobile-categories-backdrop"
+  );
+
+  tirgger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+
+  backdrop.addEventListener("click", () => {
+    menu.classList.remove("open");
+  });
+
+  document.addEventListener("keyup", (e) => {
+    if (e.code === "Escape") {
+      menu.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("scroll", () => {
+    menu.classList.remove("open");
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   mobileNavigation();
   testimonialsSlider();
+  doctorsCategories();
 });
