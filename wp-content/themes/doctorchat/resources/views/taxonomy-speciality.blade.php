@@ -12,124 +12,20 @@
     <section class="py-16">
         <div class="dc-container">
             <div class="doctors-page">
-              <x-specialities-list-component title="Specialitati"/>
+              <x-specialities-list-component />
                 <div class="doctors-grid">
-                    <a href="#">
-                        <article class="doctor-card">
-                            <div class="doctor-card-preview">
-                                <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=640:*"
-                                    alt="Doctor Name" />
-                            </div>
-                            <div class="doctor-caption">
-                                <h3 class="doctor-name">Dr. Oxana Turcu</h3>
-                                <h6 class="doctor-category">Pediatru</h6>
-                                <div class="doctor-meta">
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/message.svg')" />
-                                        </span>
-                                        <span>200 mdl</span>
-                                    </div>
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/video.svg')" />
-                                        </span>
-                                        <span>320 mdl</span>
-                                    </div>
-                                </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="doctor-card">
-                            <div class="doctor-card-preview">
-                                <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=640:*"
-                                    alt="Doctor Name" />
-                            </div>
-                            <div class="doctor-caption">
-                                <h3 class="doctor-name">Dr. Oxana Turcu</h3>
-                                <h6 class="doctor-category">Pediatru</h6>
-                                <div class="doctor-meta">
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/message.svg')" />
-                                        </span>
-                                        <span>200 mdl</span>
-                                    </div>
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/video.svg')" />
-                                        </span>
-                                        <span>320 mdl</span>
-                                    </div>
-                                </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="doctor-card">
-                            <div class="doctor-card-preview">
-                                <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=640:*"
-                                    alt="Doctor Name" />
-                            </div>
-                            <div class="doctor-caption">
-                                <h3 class="doctor-name">Dr. Oxana Turcu</h3>
-                                <h6 class="doctor-category">Pediatru</h6>
-                                <div class="doctor-meta">
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/message.svg')" />
-                                        </span>
-                                        <span>200 mdl</span>
-                                    </div>
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/video.svg')" />
-                                        </span>
-                                        <span>320 mdl</span>
-                                    </div>
-                                </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="doctor-card">
-                            <div class="doctor-card-preview">
-                                <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=640:*"
-                                    alt="Doctor Name" />
-                            </div>
-                            <div class="doctor-caption">
-                                <h3 class="doctor-name">Dr. Oxana Turcu</h3>
-                                <h6 class="doctor-category">Pediatru</h6>
-                                <div class="doctor-meta">
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/message.svg')" />
-                                        </span>
-                                        <span>200 mdl</span>
-                                    </div>
-                                    <div class="doctor-meta-item">
-                                        <span>
-                                            <img src="@asset('svgs/video.svg')" />
-                                        </span>
-                                        <span>320 mdl</span>
-                                    </div>
-                                </div>
-                        </article>
-                    </a>
+                    @if (!have_posts())
+                        <div class="alert alert-warning">
+                            {{ __('Sorry, no results were found.', 'sage') }}
+                        </div>
+                    @endif
+
+                    @while (have_posts()) @php the_post() @endphp
+                        <x-doctor-card-component :post="get_post()" />
+                    @endwhile
                 </div>
             </div>
         </div>
     </section>
-
-    <div id="mobile-categories" class="block lg:hidden">
-        <div class="mobile-categories">
-            <nav class="mobile-categories-nav">
-                <a class="mobile-categories-link" href="#">Pediatrie</a>
-                <a class="mobile-categories-link" href="#">Nefrologie</a>
-                <a class="mobile-categories-link active" href="#">Psihoterapie</a>
-                <a class="mobile-categories-link" href="#">Boli infecțioase</a>
-                <a class="mobile-categories-link" href="#">Ginecologie</a>
-                <a class="mobile-categories-link" href="#">Farmacologie</a>
-            </nav>
-        </div>
-        <div class="mobile-categories-backdrop"></div>
-    </div>
+    <x-specialities-list-mobile-component />
 @endsection

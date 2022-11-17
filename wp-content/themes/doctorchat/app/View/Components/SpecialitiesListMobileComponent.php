@@ -7,13 +7,10 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class SpecialitiesListComponent extends Component
+class SpecialitiesListMobileComponent extends Component
 {
     public array $specialities;
 
-    /**
-     * @param string $title
-     */
     public function __construct()
     {
         $terms = get_terms('speciality', array(
@@ -38,8 +35,7 @@ class SpecialitiesListComponent extends Component
      */
     public function render(): \Illuminate\Contracts\View\View|Factory|View|Application
     {
-        return view('components.specialities-list-component', [
-            'title' => get_field('specialities', 'options'),
+        return view('components.specialities-list-mobile-component', [
             'specialities' => $this->specialities,
         ]);
     }

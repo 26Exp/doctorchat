@@ -218,9 +218,9 @@
                     <div class="caption">
                         <a class="block w-full" href="{{ get_the_permalink($blog['post']->ID) }}">
                             <h3 class="title">{{ get_the_title($blog['post']->ID) }}</h3>
+                            <p class="description">{{ $blog['short_description'] }}</p>
+                            <button class="btn btn-small">{{ __('Read more') }}</button>
                         </a>
-                        <p class="description">{{ $blog['short_description'] }}</p>
-                        <button class="btn btn-small">{{ __('Read more') }}</button>
                     </div>
                     <div class="preview">
                         <img src="{{ $blog['image'] }}" alt="{{ get_the_title($blog['post']->ID) }}" />
