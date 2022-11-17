@@ -48,39 +48,39 @@ msgid "Site Editor"
 msgstr "Editor de site"
 
 #. translators: 1: Learn WordPress link.
-#: wp-admin/about.php:518
+#: wp-admin/about.php:549
 msgid "Explore <a href=\"%s\">learn.wordpress.org</a> for tutorial videos, online workshops, courses, and lesson plans for Meetup organizers, including new features in WordPress."
 msgstr "Mergi la <a href=\"%s\">learn.wordpress.org</a> pentru tutoriale video, seminarii online, cursuri și planuri de lecții pentru organizatorii de Meetup-uri, inclusiv pentru funcționalități noi în WordPress."
 
-#: wp-admin/about.php:456
+#: wp-admin/about.php:487
 msgid "https://wordpress.org/plugins/performance-lab/"
 msgstr "https://wordpress.org/plugins/performance-lab/"
 
 #. translators: %s: Link to fluid typography demo.
-#: wp-admin/about.php:185
+#: wp-admin/about.php:216
 msgid "<a href=\"%s\">Fluid typography</a> lets you define font sizes that adapt for easy reading in any screen size."
 msgstr "<a href=\"%s\">Tipografice fluide</a> îți permit să definești dimensiunile fonturilor ca să le adaptezi pentru o citire mai ușoară pe orice dimensiune de ecran."
 
-#: wp-admin/about.php:180
+#: wp-admin/about.php:211
 msgid "More responsive text with fluid typography"
 msgstr "Cu tipografice fluide, textul devine mai responsiv"
 
-#: wp-admin/about.php:478
+#: wp-admin/about.php:509
 msgid "Combine it with block locking options for even more advanced control over your blocks."
 msgstr "Combină-le cu opțiunile pentru blocarea blocurilor ca să ai un control mai eficient asupra blocurilor tale."
 
 #. translators: %s: Link to content locking dev note.
-#: wp-admin/about.php:473
+#: wp-admin/about.php:504
 msgid "Thanks to <a href=\"%s\">content-only editing settings</a>, layouts can be locked within container blocks. In a content-only block, its children are invisible to the List View and entirely uneditable. So you control the layout while your writers can focus on the content."
 msgstr "Datorită <a href=\"%s\">setărilor pentru a edita numai conținutul</a>, aranjamentele pot fi blocate în blocuri Container. Pentru un bloc care are numai conținut, copiii săi sunt invizibili în vizualizarea ca listă și nu sunt editabili. Deci controlezi aranjamentul în timp ce cei care scriu se pot concentra asupra conținutului."
 
-#: wp-admin/about.php:468
+#: wp-admin/about.php:499
 msgid "Content-only editing support for container blocks"
 msgstr "Suport pentru a edita numai conținutul pentru blocurile Container"
 
 #. translators: %s: Link to install Performance Lab plugin if permitted,
 #. otherwise link to plugin on WordPress.org.
-#: wp-admin/about.php:455
+#: wp-admin/about.php:486
 msgid "Be among the first to get the latest improvements by adding the <a href=\"%s\">Performance Lab plugin</a> to your WordPress test site or sandbox."
 msgstr "Vei fi printre primii care primesc ultimele îmbunătățiri dacă adaugi <a href=\"%s\">modulul Performance Lab</a> pe site-ul tău de testare sau pe Sandbox pentru WordPress."
 
@@ -88,206 +88,206 @@ msgstr "Vei fi printre primii care primesc ultimele îmbunătățiri dacă adaug
 #. note, 3: code-formatted "WP_Query" linked to dev note, 4: Block registration
 #. performance dev note, 5: Site health checks dev note; 6: code-formatted
 #. "async", 7: Performance field guide.
-#: wp-admin/about.php:440
+#: wp-admin/about.php:471
 msgid "WordPress 6.1 resolved more than 25 tickets dedicated to enhancing performance. From the  <a href=\"%1$s\">REST API</a> to <a href=\"%2$s\">multisite</a>, %3$s to <a href=\"%4$s\">core block registration</a>, and <a href=\"%5$s\">new Site Health checks</a> to the addition of the %6$s attribute to images, there are performance improvements for every type of site. A full breakdown can be found in the <a href=\"%7$s\">Performance Field Guide</a>."
 msgstr "WordPress 6.1 a rezolvat peste 25 de tichete deschise în vederea îmbunătățirii performanței. De la <a href=\"%1$s\">REST API</a> la <a href=\"%2$s\">multi-site</a>, de la %3$s la <a href=\"%4$s\">înregistrarea blocurilor în nucleu</a> și de la <a href=\"%5$s\">verificări noi pentru Sănătate site</a> la adăugarea de atribute %6$s pentru imagini, deci există îmbunătățiri la performanță pentru fiecare tip de site. Găsești o detaliere completă în <a href=\"%7$s\">Performance Field Guide</a>."
 
-#: wp-admin/about.php:435
+#: wp-admin/about.php:466
 msgid "Performance highlights"
 msgstr "Puncte forte la performanță"
 
 #. translators: %s: Link to spacing presets dev note.
-#: wp-admin/about.php:419
+#: wp-admin/about.php:450
 msgid "Save time and help avoid hard-coding a values into a theme with <a href=\"%s\">preset margin and padding values for multiple blocks</a>."
 msgstr "Economisești timp și eviți valorile înscrise în cod pentru o temă cu <a href=\"%s\">valori presetate pentru margini și distanțări pentru mai multe blocuri</a>."
 
-#: wp-admin/about.php:414
+#: wp-admin/about.php:445
 msgid "Spacing presets for faster, consistent design"
 msgstr "Presetări pentru spațiere ca să folosești un design rapid și consecvent"
 
 #. translators: %s: Link to theme.json filters dev note.
-#: wp-admin/about.php:401
+#: wp-admin/about.php:432
 msgid "<a href=\"%s\">Leverage filters</a> in the Styles sidebar to control settings at all four levels of your site—core, theme, user, or block, from less to more specific."
 msgstr "<a href=\"%s\">Profiți de avantajul filtrelor</a> din bara laterală Stiluri ca să controlezi toate setările pe cele patru niveluri ale site-ului: nucleu, teme, utilizatori și blocuri."
 
-#: wp-admin/about.php:396
+#: wp-admin/about.php:427
 msgid "Filters for all your styles"
 msgstr "Filtre pentru toate stilurile tale"
 
 #. translators: %s: Link to query loop dev note.
-#: wp-admin/about.php:379
+#: wp-admin/about.php:410
 msgid "<a href=\"%s\">New filters</a> let Query Block variations support custom queries for more powerful variations and advanced hierarchical post types filtering options."
 msgstr "<a href=\"%s\">Filtrele noi</a> permit ca variantele blocului Interogare să accepte interogări personalizate pentru mai multe variante și opțiuni avansate de filtrare a tipurilor de articol ierarhice."
 
-#: wp-admin/about.php:374
+#: wp-admin/about.php:405
 msgid "Expanded support for Query Loop blocks"
 msgstr "Suport extins pentru blocurile Buclă interogări"
 
 #. translators: 1: Link to block-based template parts in classic themes dev
 #. note, 2: Folder name.
-#: wp-admin/about.php:360
+#: wp-admin/about.php:391
 msgid "<a href=\"%1$s\">Block template parts can now be defined in classic themes</a> by adding the appropriate HTML files to the %2$s directory at the root of the theme."
 msgstr "<a href=\"%1$s\">Părțile de șablon bazate pe blocuri pot să fie definite acum și în temele clasice</a> prin adăugarea unor fișiere HTML adecvate în directorul %2$s, la rădăcina temei."
 
-#: wp-admin/about.php:355
+#: wp-admin/about.php:386
 msgid "Block template parts in classic themes"
 msgstr "Părți de șablon bazate pe blocuri în temele clasice"
 
 #. translators: %s: Link to layout support refactor dev note.
-#: wp-admin/about.php:338
+#: wp-admin/about.php:369
 msgid "The default content dimensions provided by themes can now be overridden in the Styles Sidebar, giving site builders better control over full-width content. Developers have <a href=\"%s\">fine-grained control over these controls</a>."
 msgstr "Dimensiunile implicite pentru conținut oferite de teme pot să fie acum contramandate în bara laterală Stiluri, oferind constructorilor de site-uri un control mai bun asupra conținutului în lățime completă. Dezvoltatorii au un <a href=\"%s\">control precis asupra acestor comenzi</a>."
 
-#: wp-admin/about.php:333
+#: wp-admin/about.php:364
 msgid "Continued evolution of layout options"
 msgstr "Dezvoltarea continuă a opțiunilor pentru aranjamente"
 
 #. translators: %s: Link to styling elements dev note.
-#: wp-admin/about.php:320
+#: wp-admin/about.php:351
 msgid "Updates include <a href=\"%s\">styling elements</a> like buttons, citations, and links globally; controlling hover, active, and focus states for links using theme.json (not available to control in the interface yet); and customizing outline support for blocks and elements, among other features."
 msgstr "Actualizările includ <a href=\"%s\">elemente de design</a>, cum ar fi butoane, citate și legături la nivel global, controlul pentru legături al stărilor trecere peste, activă și accentuată folosind theme.json (nu este încă disponibil pentru control în interfață) și personalizarea suportului pentru conturul blocurilor și elementelor, la capitolul funcționalități."
 
-#: wp-admin/about.php:315
+#: wp-admin/about.php:346
 msgid "Updated interface options and features"
 msgstr "Opțiuni și funcționalități actualizate pentru interfață"
 
-#: wp-admin/about.php:302
+#: wp-admin/about.php:333
 msgid "A new modal design offers a background blur effect, making it easier to focus on the task at hand."
 msgstr "Designul nou pentru fereastra modală oferă un efect de estompare a fundalului, facilitând concentrarea asupra sarcinii în cauză."
 
 #. translators: %s: "General Settings" admin page title, linked to the page if
 #. the user can edit options.
-#: wp-admin/about.php:297
+#: wp-admin/about.php:328
 msgid "The site tagline is empty by default in new sites but can be modified in %s."
 msgstr "Implicit, sloganul site-ului este gol pe site-urile noi, dar poate fi adăugat în %s."
 
-#: wp-admin/about.php:292
+#: wp-admin/about.php:323
 msgid "6.1 includes a new time-to-read feature showing content authors the approximate time-to-read values for pages, posts, and custom post types."
 msgstr "6.1 include o funcționalitate nouă, timp de citire, care arată autorilor de conținut timpul aproximativ de citire a paginilor, articolelor și tipurilor de articol personalizat."
 
-#: wp-admin/about.php:291
+#: wp-admin/about.php:322
 msgid "Other notes of interest"
 msgstr "Alte note care prezintă interes"
 
 #. translators: %s: Link to accessibility improvements dev note.
-#: wp-admin/about.php:278
+#: wp-admin/about.php:309
 msgid "More than 40 improvements in accessibility include resolving focus loss problems in the editor, improving form labels and audible messages, making alternative text easier to edit, and fixing the sub-menu overlap in the expanded admin side navigation at smaller screen sizes and higher zoom levels. Learn more about <a href=\"%s\">accessibility in WordPress</a>."
 msgstr "Peste 40 de îmbunătățiri la accesibilitate. Câteva dintre ele: am rezolvat problemele de distragerea atenției în editor, am îmbunătățit etichetele din formulare și mesajele acustice, textul alternativ este mai ușor de editat și am corectat suprapunerea sub-meniurilor în navigarea extinsă din partea administrativă pentru dimensiuni mai mici ale ecranelor și niveluri mari de mărire a ecranelor. Află mai multe despre <a href=\"%s\">accesibilitate în WordPress</a>."
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:304
 msgid "Improved admin and editor accessibility"
 msgstr "Accesibilitate îmbunătățită în administrare și editor"
 
 #. translators: %s: Link style engine dev note.
-#: wp-admin/about.php:257
+#: wp-admin/about.php:288
 msgid "The CSS rules for margin, padding, typography, colors, and borders within the <a href=\"%s\">styles engine</a> are now all in one place, reducing time spent on layout-specific tasks and helps to generate semantic class names."
 msgstr "Regulile CSS pentru margini, distanțări, tipografice, culori și chenare din <a href=\"%s\">motorul de stiluri</a> sunt acum toate într-un singur loc. Astfel, nu mai cauți sarcinile pentru anumite aranjamente și poți să generezi nume de clase în sensul cuvintelor."
 
-#: wp-admin/about.php:252
+#: wp-admin/about.php:283
 msgid "A streamlined style system"
 msgstr "Un sistem de stiluri simplificat"
 
 #. translators: %s: Link to block editor preferences dev note.
-#: wp-admin/about.php:239
+#: wp-admin/about.php:270
 msgid "Site Editor settings are now <a href=\"%s\">persistent for each user</a>. This means your settings will now be consistent across browsers and devices."
 msgstr "Acum setările editorului de site-uri sunt <a href=\"%s\">persistente pentru fiecare utilizator</a>. Asta înseamnă că setările tale rămân aceleași indiferent de navigator sau dispozitiv."
 
-#: wp-admin/about.php:234
+#: wp-admin/about.php:265
 msgid "Keep your Site Editor settings for later"
 msgstr "Păstrează setările Editorului de site-uri pentru mai târziu"
 
-#: wp-admin/about.php:219
+#: wp-admin/about.php:250
 msgid "https://wordpress.org/themes/tags/full-site-editing/"
 msgstr "https://wordpress.org/themes/tags/full-site-editing/"
 
 #. translators: %s: Link to Block Themes on WordPress.org.
-#: wp-admin/about.php:218
+#: wp-admin/about.php:249
 msgid "The Themes Directory has <a href=\"%s\">a filter for block themes</a>, and a pattern preview gives a better sense of what the theme might look like while exploring different themes and patterns."
 msgstr "Directorul de teme are <a href=\"%s\">un filtru pentru temele cu blocuri</a> și, totodată, previzualizările pentru modele îți oferă o imagine de ansamblu despre cum va arăta tema aleasă împreună cu modelele pe care le-ai inspectat."
 
-#: wp-admin/about.php:213
+#: wp-admin/about.php:244
 msgid "Find block themes faster"
 msgstr "Găsești mai repede temele cu blocuri"
 
-#: wp-admin/about.php:204
+#: wp-admin/about.php:235
 msgid "In WordPress 6.0, when you created a new page, you would see suggested patterns so you did not have to start with a blank page. In 6.1, you will also see the starter patterns modal when you create a new instance of any post type."
 msgstr "Când creezi o pagină nouă în WordPress 6.0, vezi niște modele sugerate, ca să ai inspirație pentru pagina goală. Și în WordPress 6.1 vei vedea o fereastră modală cu modele cu care să începi când creezi o instanță nouă pentru orice tip de articol."
 
-#: wp-admin/about.php:203
+#: wp-admin/about.php:234
 msgid "Add starter patterns to any post type"
 msgstr "Adaugă modele cu care poți să începi orice tip de articol"
 
-#: wp-admin/about.php:174
+#: wp-admin/about.php:205
 msgid "The List and Quote blocks now support inner blocks, allowing for more flexible and rich compositions like adding headings inside your Quote blocks."
 msgstr "Acum blocurile Listă și Citat acceptă blocuri în interiorul lor și permit compuneri mai flexibile și mai bogate, cum ar fi adăugarea unui subtitlu în blocurile Citat."
 
-#: wp-admin/about.php:173
+#: wp-admin/about.php:204
 msgid "Compose richer lists and quotes with inner blocks"
 msgstr "Redactezi liste și citate mai bogate folosind blocuri interne"
 
-#: wp-admin/about.php:167
+#: wp-admin/about.php:198
 msgid "Various blocks have improved placeholders that reflect customization options to help you design your site and its content. For example, the Image block placeholder displays custom borders and duotone filters even before selecting an image."
 msgstr "Mai multe blocuri au substituenți îmbunătățiți care reflectă opțiunile de personalizare ca să te ajute să-ți proiectezi site-ul și conținutul lui. De exemplu, substituentul pentru blocul Imagine afișează chenare personalizate și filtre duotone înainte de selectarea unei imagini."
 
-#: wp-admin/about.php:166
+#: wp-admin/about.php:197
 msgid "Improved block placeholders"
 msgstr "Substituenți îmbunătățiți pentru blocuri"
 
-#: wp-admin/about.php:157
+#: wp-admin/about.php:188
 msgid "When locking blocks, a new toggle lets you apply your lock settings to all the blocks in a containing block like the group, cover, and column blocks."
 msgstr "Când blochezi blocuri, un comutator nou îți permite să aplici setările de blocare pentru toate blocurilor dintr-un bloc cu conținut, cum ar fi blocurile Grup, Copertă și Coloană."
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:187
 msgid "One-click lock settings for all inner blocks"
 msgstr "Setări de blocare cu un singur clic pentru toate blocurile interne"
 
-#: wp-admin/about.php:150
+#: wp-admin/about.php:181
 msgid "A cleaner, better-organized display helps you easily view and manage important post and page settings, especially the template picker and scheduler."
 msgstr "O afișare mai bine organizată și proporționată te ajută să vezi și să administrezi cu ușurință setările importante pentru articole și pagini, în special selectorul de șabloane și programatorul."
 
-#: wp-admin/about.php:149
+#: wp-admin/about.php:180
 msgid "Improved layout and visualization of document settings"
 msgstr "Aranjament și vizualizare îmbunătățite pentru setările documentelor"
 
 #. translators: %s: Link to navigation block fallback dev note.
-#: wp-admin/about.php:131
+#: wp-admin/about.php:162
 msgid "<a href=\"%s\">New fallback options</a> in the navigation block mean you can edit the menu that’s open; no searching needed. Plus, the controls for choosing and working on menus have their own place in the block settings. The mobile menu system also gets an upgrade with new features, including different icon options, to make the menu yours."
 msgstr "<a href=\"%s\">Opțiuni noi ca alternativă</a> în blocul Navigare prin care poți să editezi meniul care este deschis; nu mai este nevoie să-l cauți. În plus, comenzile pentru alegerea meniurilor și lucrul cu ele se găsesc acum în setările pentru blocuri. De asemenea, sistemul care se ocupă cu meniurile pentru mobil are actualizări și funcționalități noi, inclusiv diferite opțiuni pentru iconuri, ca să-ți personalizezi meniurile."
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:157
 msgid "Menus just got easier to create and manage"
 msgstr "Acum meniurile sunt mai ușor de creat și de administrat"
 
 #. translators: %s: Link to layout support refactor dev note.
-#: wp-admin/about.php:116
+#: wp-admin/about.php:147
 msgid "Upgrades to the <a href=\"%s\">controls for design elements and blocks</a> make the layout and site-building process more consistent, complete, and intuitive."
 msgstr "Actualizările la <a href=\"%s\">comenzile pentru elemente de design și blocuri</a> fac ca aranjamentele și procesul de creare a site-ului să fie mai consistente, complete și intuitive."
 
-#: wp-admin/about.php:111
+#: wp-admin/about.php:142
 msgid "More consistency and control across design tools"
 msgstr "Uneltele de proiectare au mai multă consistență și un control îmbunătățit"
 
 #. translators: 1: Link to template options dev note, 2: Link to template
 #. creation dev note.
-#: wp-admin/about.php:90
+#: wp-admin/about.php:121
 msgid "<a href=\"%1$s\">New templates</a> include a custom template for posts and pages in the Site Editor. Search-and-replace tools speed up the design of <a href=\"%2$s\">template parts</a>."
 msgstr "<a href=\"%1$s\">Șabloane noi</a> includ și un șablon personalizat pentru articole și pagini în Editorul de site-uri. Uneltele pentru căutare și înlocuire accelerează crearea <a href=\"%2$s\">părților de șablon</a>."
 
-#: wp-admin/about.php:85
+#: wp-admin/about.php:116
 msgid "A better creator experience with refined and additional templates"
 msgstr "O experiență mai bună pentru creatori, cu șabloane rafinate și suplimentare"
 
 #. translators: 1: Variation announcement post URL, 2: Accessibility-ready
 #. handbook page.
-#: wp-admin/about.php:74
+#: wp-admin/about.php:105
 msgid "Building on the foundational elements in the 5.9 and 6.0 releases for block themes and style variations, the new default theme, Twenty Twenty-Three, includes <a href=\"%1$s\">10 different styles</a> and is &#147;<a href=\"%2$s\">Accessibility Ready</a>&#148;."
 msgstr "Construită pe elementele de bază din versiunile 5.9 și 6.0 pentru temele cu blocuri și variantele pentru stil, noua temă implicită, Twenty Twenty-Three, are <a href=\"%1$s\">10 stiluri diferite</a> și este „<a href=\"%2$s\">pregătită pentru accesibilitate</a>”."
 
-#: wp-admin/about.php:69
+#: wp-admin/about.php:100
 msgid "A new default theme powered by 10 distinct style variations"
 msgstr "O nouă temă implicită propulsată prin 10 variante distincte pentru stil"
 
-#: wp-admin/about.php:57
+#: wp-admin/about.php:88
 msgid "This page highlights some of the most significant changes to the product since the May 2022 release of WordPress 6.0. You will also find resources for developers and anyone seeking a deeper understanding of WordPress."
 msgstr "Această pagină evidențiază unele dintre cele mai semnificative modificări aduse platformei după lansarea din luna mai 2022 a WordPress 6.0. De asemenea, vei găsi resurse pentru dezvoltatori și pentru oricine dorește să aprofundeze ceea ce oferă WordPress."
 
@@ -619,40 +619,40 @@ msgid "Reach out to WordPress Core developers to ensure you'll never have this p
 msgstr "Ia legătura cu dezvoltatorii nucleului WordPress ca să te asiguri că nu vei mai avea niciodată această problemă."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:611
+#: wp-admin/about.php:642
 msgid "Important! Your version of WordPress (%1$s) will stop receiving security updates in the near future. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "Important! Versiunea ta de WordPress (%1$s) nu va mai primi actualizări de securitate în viitorul apropiat. Pentru a menține site-ul în siguranță, te rog <a href=\"%2$s\">actualizează la cea mai recentă versiune de WordPress</a>."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:608
+#: wp-admin/about.php:639
 msgid "Important! Your version of WordPress (%1$s) is no longer supported, you will not receive any security updates for your website. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "Important! Versiunea ta de WordPress (%1$s) nu mai este suportată și nu vei mai primi actualizări de securitate pentru site-ul web. Pentru a menține site-ul în siguranță, te rog <a href=\"%2$s\">actualizează la cea mai recentă versiune de WordPress</a>."
 
-#: wp-admin/about.php:530
+#: wp-admin/about.php:561
 msgid "https://make.wordpress.org/core/2022/10/12/wordpress-6-1-field-guide/"
 msgstr "https://make.wordpress.org/core/2022/10/12/wordpress-6-1-field-guide/"
 
 #. translators: 1: WordPress Release Notes link, 2: WordPress version number.
-#: wp-admin/about.php:540
+#: wp-admin/about.php:571
 msgid "<a href=\"%1$s\">Read the WordPress %2$s Release Notes</a> for more information on the included enhancements and issues fixed, installation information, developer notes and resources, release contributors, and the list of file changes in this release."
 msgstr "<a href=\"%1$s\">Citește notele de lansare pentru WordPress %2$s</a> ca să vezi mai multe informații despre îmbunătățirile aduse și corecțiile făcute, despre instalare, note și resurse pentru dezvoltatori, despre contributorii care și-au adus aportul la lansare și lista cu modificări la fișiere pentru această versiune."
 
 #. translators: %s: WordPress Field Guide link.
-#: wp-admin/about.php:529
+#: wp-admin/about.php:560
 msgid "Check out the latest version of the <a href=\"%s\">WordPress Field Guide</a>. It is overflowing with detailed developer notes to help you build with WordPress."
 msgstr "Consultă ultima versiune a <a href=\"%s\">WordPress Field Guide</a>. Cuprinde multe note detaliate pentru dezvoltatori care să îi ajute să construiască cu WordPress."
 
 #. translators: %s: 6.1 overview video link.
-#: wp-admin/about.php:504
+#: wp-admin/about.php:535
 msgid "See WordPress 6.1 in action! <a href=\"%s\">Watch a brief overview video</a> highlighting some of the major features debuting in WordPress 6.1."
 msgstr "Vezi WordPress 6.1 în acțiune! <a href=\"%s\">Urmărește un scurt video de prezentare generală</a> care evidențiază unele dintre funcționalitățile importante care își fac debutul în WordPress 6.1."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:495
+#: wp-admin/about.php:526
 msgid "Learn more about WordPress %s"
 msgstr "Află mai mult despre WordPress %s"
 
-#: wp-admin/about.php:487
+#: wp-admin/about.php:518
 msgid "Exploring WordPress 6.1 video"
 msgstr "Vezi un video despre WordPress 6.1"
 
@@ -786,7 +786,7 @@ msgstr "Activă"
 
 #: wp-admin/includes/class-core-upgrader.php:160
 #: wp-admin/includes/class-wp-upgrader.php:166
-#: wp-admin/includes/update-core.php:1019
+#: wp-admin/includes/update-core.php:1020
 msgid "The update cannot be installed because some files could not be copied. This is usually due to inconsistent file permissions."
 msgstr "Actualizarea nu poate fi instalată deoarece nu am putut să copiem unele fișiere. Aceasta se datorează de obicei permisiunilor inconsistente pentru fișiere."
 
@@ -1605,7 +1605,7 @@ msgstr "Adaugă o parolă nouă pentru aplicație"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "Trebuie să creezi o parolă pentru aplicație, dar nu trebuie să actualizezi utilizatorul."
 
-#: wp-admin/about.php:558
+#: wp-admin/about.php:589
 msgid "Go to Updates"
 msgstr "Mergi la Actualizări"
 
@@ -2902,7 +2902,7 @@ msgid "The seventh parameter passed to %s should be numeric representing menu po
 msgstr "Al șaptelea parametru trecut în %s ar trebui să fie un număr care să reprezinte poziția din meniu."
 
 #. translators: 1: WordPress version number, 2: The PHP extension name needed.
-#: wp-admin/includes/update-core.php:1114
+#: wp-admin/includes/update-core.php:1115
 msgid "The update cannot be installed because WordPress %1$s requires the %2$s PHP extension."
 msgstr "Actualizarea nu poate fi instalată deoarece WordPress %1$s are nevoie de extensia PHP %2$s."
 
@@ -4948,11 +4948,11 @@ msgctxt "plugin"
 msgid "Cannot Install"
 msgstr "Nu-l pot instala"
 
-#. translators: %s: WordPress version number.
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:543 wp-admin/includes/update.php:306
-#: wp-admin/index.php:119 wp-admin/install.php:239 wp-admin/update-core.php:94
-#: wp-admin/upgrade.php:81
+#. translators: %s: WordPress version number.
+#: wp-admin/about.php:67 wp-admin/about.php:574
+#: wp-admin/includes/update.php:306 wp-admin/index.php:119
+#: wp-admin/install.php:239 wp-admin/update-core.php:94 wp-admin/upgrade.php:81
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -7331,7 +7331,7 @@ msgid "(Currently set to: %s)"
 msgstr "(setat acum pentru: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:582
+#: wp-admin/about.php:613
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>Versiunea %s</strong> a rezolvat o problemă de securitate."
 
@@ -7343,15 +7343,15 @@ msgstr "https://ro.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Poză de profil"
 
-#: wp-admin/about.php:579
+#: wp-admin/about.php:47 wp-admin/about.php:610
 msgid "Maintenance and Security Releases"
 msgstr "Lansări de mentenanță și securitate"
 
-#: wp-admin/about.php:576
+#: wp-admin/about.php:607
 msgid "Security Releases"
 msgstr "Lansări de securitate"
 
-#: wp-admin/about.php:573
+#: wp-admin/about.php:604
 msgid "Maintenance Releases"
 msgstr "Lansări de mentenanță"
 
@@ -9059,8 +9059,8 @@ msgstr "Site-ul tău (%1$s) a avut o problemă critică în timpul încercării 
 msgid "WordPress %s is also now available."
 msgstr "E disponibil și WordPress %s."
 
-#: wp-admin/includes/update-core.php:1191
-#: wp-admin/includes/update-core.php:1227
+#: wp-admin/includes/update-core.php:1192
+#: wp-admin/includes/update-core.php:1228
 msgid "The update cannot be installed because your site is unable to copy some files. This is usually due to inconsistent file permissions."
 msgstr "Actualizarea nu poate fi instalată deoarece site-ul tău nu poate să copieze unele fișiere. De obicei, este din cauza permisiunilor inconsistente pentru fișiere."
 
@@ -9175,7 +9175,7 @@ msgstr "Actualizează traducerile"
 msgid "Background updates"
 msgstr "Actualizări în fundal"
 
-#: wp-admin/includes/update-core.php:1287
+#: wp-admin/includes/update-core.php:1288
 msgid "There is not enough free disk space to complete the update."
 msgstr "Nu este suficient spațiu pe disc pentru a finaliza actualizarea."
 
@@ -9253,11 +9253,11 @@ msgstr "Numele de utilizator furnizat are caractere invalide."
 msgid "Please provide a valid username."
 msgstr "Te rog să furnizezi un nume de utilizator valid."
 
-#: wp-admin/includes/update-core.php:1208
+#: wp-admin/includes/update-core.php:1209
 msgid "Copying the required files&#8230;"
 msgstr "Copiez fișierele necesare&#8230;"
 
-#: wp-admin/includes/update-core.php:1122
+#: wp-admin/includes/update-core.php:1123
 msgid "Preparing to install the latest version&#8230;"
 msgstr "Pregătesc instalarea ultimei versiuni&#8230;"
 
@@ -9959,7 +9959,7 @@ msgid "Search engine visibility"
 msgstr "Vizibilitate pentru motoare de căutare"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1521 wp-admin/update-core.php:904
+#: wp-admin/includes/update-core.php:1522 wp-admin/update-core.php:904
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "Bun venit în WordPress %1$s. Vei fi redirectat la ecranul Despre WordPress. Dacă nu, apasă <a href=\"%2$s\">aici</a>."
 
@@ -10681,14 +10681,15 @@ msgstr "Introdu adresa de email a unui utilizator existent în această rețea p
 msgid "Show Toolbar when viewing site"
 msgstr "Arată bara de unelte când vizualizez site-ul"
 
+#. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:605
+#: wp-admin/about.php:64 wp-admin/about.php:636
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Pentru mai multe informații, vezi <a href=\"%s\">notele de lansare</a>."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:599
+#: wp-admin/about.php:630
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Versiunea %1$s</strong> a rezolvat câteva probleme de securitate și a corectat o eroare."
@@ -10697,7 +10698,7 @@ msgstr[2] "<strong>Versiunea %1$s</strong> a rezolvat câteva probleme de securi
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:593
+#: wp-admin/about.php:624
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Versiunea %1$s</strong> a rezolvat o problemă de securitate și a corectat o eroare."
@@ -10705,7 +10706,7 @@ msgstr[1] "<strong>Versiunea %1$s</strong> a rezolvat o problemă de securitate 
 msgstr[2] "<strong>Versiunea %1$s</strong> a rezolvat o problemă de securitate și a corectat %2$s de erori."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:587
+#: wp-admin/about.php:52 wp-admin/about.php:618
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Versiunea %1$s</strong> a rezolvat %2$s eroare."
@@ -10713,19 +10714,19 @@ msgstr[1] "<strong>Versiunea %1$s</strong> a rezolvat %2$s erori."
 msgstr[2] "<strong>Versiunea %1$s</strong> a rezolvat %2$s de erori."
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:584
+#: wp-admin/about.php:615
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>Versiunea %s</strong> a rezolvat câteva probleme de securitate."
 
-#: wp-admin/about.php:578
+#: wp-admin/about.php:609
 msgid "Maintenance and Security Release"
 msgstr "Actualizare de mentenanță și securitate"
 
-#: wp-admin/about.php:575
+#: wp-admin/about.php:606
 msgid "Security Release"
 msgstr "Actualizare de securitate"
 
-#: wp-admin/about.php:572
+#: wp-admin/about.php:603
 msgid "Maintenance Release"
 msgstr "Actualizare de mentenanță"
 
@@ -10739,7 +10740,7 @@ msgid "This screen allows you to choose your permalink structure. You can choose
 msgstr "Acest ecran îți permite să alegi o structură pentru legăturile permanente. Poți să alegi din setările obișnuite sau să creezi structuri cu URL-uri personalizate."
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1529 wp-admin/update-core.php:912
+#: wp-admin/includes/update-core.php:1530 wp-admin/update-core.php:912
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "Bun venit pe WordPress %1$s. <a href=\"%2$s\">Află mai multe</a>."
 
@@ -11007,15 +11008,15 @@ msgid "Because this is a multisite installation, you may add accounts that alrea
 msgstr "Deoarece aceasta este o instalare multi-site, poți adăuga conturi care există deja în rețea prin specificarea unui nume de utilizator sau a unui email și definind un rol. Pentru mai multe opțiuni, cum ar fi specificarea unei parole, trebuie să fii un Administrator de rețea și să folosești legătura de sub numele unui utilizator existent pentru a edita profilul utilizatorului în Administrare rețea > Toți utilizatorii."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:51
+#: wp-admin/about.php:82
 msgid "Welcome to WordPress %s"
 msgstr "Bine ai venit la WordPress %s"
 
-#: wp-admin/about.php:561
+#: wp-admin/about.php:592
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Mergi la Panou control &rarr; Prima pagină"
 
-#: wp-admin/about.php:558
+#: wp-admin/about.php:589
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "Mergi la Panou control &rarr; Actualizări"
 
@@ -12754,7 +12755,7 @@ msgid "User already exists. Password inherited."
 msgstr "Utilizatorul există deja. Parolă moștenită."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:428
-#: wp-admin/includes/update-core.php:1515 wp-admin/update-core.php:900
+#: wp-admin/includes/update-core.php:1516 wp-admin/update-core.php:900
 msgid "WordPress updated successfully."
 msgstr "WordPress a fost actualizat cu succes."
 
@@ -12783,7 +12784,7 @@ msgstr "Actualizări WordPress"
 msgid "Edit menu item"
 msgstr "Editează elementul de meniu"
 
-#: wp-admin/about.php:561 wp-admin/includes/network.php:148
+#: wp-admin/about.php:592 wp-admin/includes/network.php:148
 msgid "Go to Dashboard"
 msgstr "Mergi la Panou control"
 
@@ -13606,7 +13607,7 @@ msgstr "Oricine se poate înregistra"
 msgid "Membership"
 msgstr "Membri"
 
-#: wp-admin/about.php:298 wp-admin/options-general.php:20
+#: wp-admin/about.php:329 wp-admin/options-general.php:20
 msgid "General Settings"
 msgstr "Setări generale"
 
@@ -13999,34 +14000,34 @@ msgstr "Actualizează la %s"
 msgid "You are using a development version (%1$s). Cool! Please <a href=\"%2$s\">stay updated</a>."
 msgstr "Folosești o versiune în dezvoltare (%1$s). Super! Te rog <a href=\"%2$s\">să rămâi actualizat</a>."
 
-#: wp-admin/includes/update-core.php:1445
+#: wp-admin/includes/update-core.php:1446
 msgid "Upgrading database&#8230;"
 msgstr "Actualizez baza de date&#8230;"
 
-#: wp-admin/includes/update-core.php:1003
+#: wp-admin/includes/update-core.php:1004
 msgid "The update could not be unpacked"
 msgstr "Actualizarea nu a putut fi dezarhivată"
 
-#: wp-admin/includes/update-core.php:985
+#: wp-admin/includes/update-core.php:986
 msgid "Verifying the unpacked files&#8230;"
 msgstr "Verific fișierele despachetate&#8230;"
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number, 3: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1100
+#: wp-admin/includes/update-core.php:1101
 msgid "The update cannot be installed because WordPress %1$s requires MySQL version %2$s or higher. You are running version %3$s."
 msgstr "Actualizarea nu poate fi instalată deoarece WordPress %1$s necesită versiunea MySQL %2$s sau mai recentă. Tu rulezi versiunea %3$s."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Current PHP version number.
-#: wp-admin/includes/update-core.php:1089
+#: wp-admin/includes/update-core.php:1090
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher. You are running version %3$s."
 msgstr "Actualizarea nu poate fi instalată deoarece WordPress %1$s necesită versiunea PHP %2$s sau mai recentă. Tu rulezi versiunea %3$s."
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Minimum required MySQL version number, 4: Current PHP version
 #. number, 5: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1076
+#: wp-admin/includes/update-core.php:1077
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher and MySQL version %3$s or higher. You are running PHP version %4$s and MySQL version %5$s."
 msgstr "Actualizarea nu poate fi instalată deoarece WordPress %1$s necesită versiunea PHP %2$s sau mai recentă și versiunea MySQL %3$s sau mai recentă. Tu rulezi versiunea PHP %4$s și versiunea MySQL %5$s."
 
@@ -14968,7 +14969,7 @@ msgid "Empty archive."
 msgstr "Arhivă goală."
 
 #: wp-admin/includes/file.php:1742 wp-admin/includes/file.php:1872
-#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1386
+#: wp-admin/includes/file.php:1917 wp-admin/includes/update-core.php:1387
 msgid "Could not copy file."
 msgstr "Nu am putut să copiez fișierul."
 
@@ -15286,12 +15287,12 @@ msgid "The plugin is at the latest version."
 msgstr "Modulul are ultima versiune."
 
 #: wp-admin/includes/class-wp-upgrader.php:169
-#: wp-admin/includes/update-core.php:1335
+#: wp-admin/includes/update-core.php:1336
 msgid "Disabling Maintenance mode&#8230;"
 msgstr "Site-ul iese din mentenanță&#8230;"
 
 #: wp-admin/includes/class-wp-upgrader.php:168
-#: wp-admin/includes/update-core.php:1199
+#: wp-admin/includes/update-core.php:1200
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "Site-ul intră în mentenanță&#8230;"
 
