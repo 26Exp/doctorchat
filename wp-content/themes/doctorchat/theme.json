@@ -1140,6 +1140,11 @@
           "color": "#a0d2d2"
         },
         {
+          "name": "Doctorchat Turquoise",
+          "slug": "doctorchat-turquoise",
+          "color": "#0fa49e"
+        },
+        {
           "name": "Doctorchat Red",
           "slug": "doctorchat-red",
           "color": "#e81f41"
