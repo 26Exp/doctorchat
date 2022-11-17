@@ -22,12 +22,10 @@ class DoctorCardComponent extends Component
 
         $this->name = $post->post_title;
         $this->speciality = get_the_terms($post->ID, 'speciality')[0]->name;
-        $this->avatar = get_field('avatar', $post->ID) ?? 0;
+        $this->avatar = get_field('avatar', $post->ID) ?? asset('svgs/doctor.svg');
         $this->permalink = get_permalink($post->ID);
-        $this->priceChat = get_field('price_chat', $post->ID) ?? 0;
-        $this->priceVideo = get_field('price_video', $post->ID) ?? 0;
-
-
+        $this->priceChat = get_field('price_chat', $post->ID) ?? '-';
+        $this->priceVideo = get_field('price_video', $post->ID) ?? '-';
     }
 
     /**

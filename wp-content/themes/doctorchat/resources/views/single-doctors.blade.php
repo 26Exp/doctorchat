@@ -4,7 +4,7 @@
   <section class="page-header">
     <div class="dc-container">
       <div class="page-header-content">
-        <h1>Doctor {{ $post->post_title }}</h1>
+        <h1>Dr. {{ $post->post_title }}</h1>
       </div>
     </div>
   </section>
