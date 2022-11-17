@@ -151,25 +151,3 @@ function get_speciality(): array
     return $query->get_posts();
 }
 
-function get_all_specialities(): array
-{
-    // get all terms from speciality taxonomy
-    $terms = get_terms('speciality', array(
-        'hide_empty' => false,
-    ));
-
-
-    $specialities = [];
-    foreach ($terms as $term) {
-        $specialities[] = [
-            'name' => $term->name,
-            'slug' => $term->slug,
-            'count' => $term->count,
-            'is_active' => get_queried_object()->slug === $term->slug,
-            'permalink' => get_term_link($term),
-        ];
-    }
-
-    return $specialities;
-}
-

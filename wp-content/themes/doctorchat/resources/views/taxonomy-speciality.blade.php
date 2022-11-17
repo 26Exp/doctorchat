@@ -12,22 +12,7 @@
     <section class="py-16">
         <div class="dc-container">
             <div class="doctors-page">
-                <button id="mobile-categories-trigger" class="mobile-categories-trigger lg:hidden">
-                    <span>
-                        <img src="@asset('svgs/filters.svg')" />
-                    </span>
-                    <span>Specialitate</span>
-                </button>
-                <div class="categories hidden lg:block">
-                    <nav class="categories-nav">
-                        <a class="categories-link" href="#">Pediatrie</a>
-                        <a class="categories-link" href="#">Nefrologie</a>
-                        <a class="categories-link active" href="#">Psihoterapie</a>
-                        <a class="categories-link" href="#">Boli infecțioase</a>
-                        <a class="categories-link" href="#">Ginecologie</a>
-                        <a class="categories-link" href="#">Farmacologie</a>
-                    </nav>
-                </div>
+              <x-specialities-list-component title="Specialitati"/>
                 <div class="doctors-grid">
                     <a href="#">
                         <article class="doctor-card">
