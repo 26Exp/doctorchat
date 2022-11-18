@@ -151,26 +151,6 @@ function get_speciality(): array
     return $query->get_posts();
 }
 
-// return speciality=pediatrie and post_type=doctors
-function get_doctors_by_speciality(): array
-{
-    $args = array(
-        'post_type' => 'doctors',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'speciality',
-                'field' => 'slug',
-                'terms' => get_queried_object(),
-            ),
-        ),
-        'posts_per_page' => -1,
-    );
-    $query = new WP_Query($args);
-
-    return $query->get_posts();
-}
-
-
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page('Translated Label');
 }
