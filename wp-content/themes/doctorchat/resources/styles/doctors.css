@@ -116,3 +116,124 @@
     @apply grid-cols-3;
   }
 }
+
+/* Single Doctor Page */
+.doctor-view {
+  @apply space-y-14;
+}
+
+.doctor-view-section p {
+  @apply text-doctorchat-gray;
+}
+
+.doctor-view-section-title {
+  @apply text-2xl text-doctorchat-turquoise font-bold mb-3;
+}
+
+.doctor-main .preview {
+  @apply flex items-start justify-center max-h-96 overflow-hidden mb-4 rounded-md;
+}
+
+.doctor-main .preview img {
+  @apply object-cover object-bottom w-full h-full;
+}
+
+.doctor-main .name {
+  @apply text-3xl text-doctorchat-red font-bold mb-2;
+}
+
+.doctor-main .category {
+  @apply text-xl text-doctorchat-gray mb-6;
+}
+
+.doctor-main .line-with-icon {
+  @apply flex items-center space-x-2 mb-3 text-doctorchat-gray;
+}
+
+.doctor-main .line-with-icon img {
+  @apply w-6;
+}
+
+.doctor-main .meta {
+  @apply flex items-center space-x-5 my-6;
+}
+
+.doctor-main .meta-item {
+  @apply flex items-center justify-center space-x-3 text-lg text-doctorchat-gray;
+}
+
+.doctor-main .meta-item img {
+  @apply w-8;
+}
+
+.doctor-main .action {
+  @apply bg-doctorchat-turquoise text-white font-medium py-3 px-5 rounded-md transition-colors hover:bg-doctorchat-turquoise/70 text-lg;
+}
+
+.doctor-symptoms .symptoms {
+  @apply grid grid-cols-2 gap-2;
+}
+
+.doctor-symptoms .symptom {
+  @apply flex flex-col bg-zinc-100 py-8 px-4 items-center justify-center space-y-5 text-doctorchat-gray;
+}
+
+.doctor-symptoms .symptom .icon {
+  @apply relative w-16 h-16 bg-doctorchat-mint/30 rounded-full;
+}
+
+.doctor-symptoms .symptom .icon img {
+  @apply w-10 h-10 absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3;
+}
+
+@screen sm {
+  .doctor-main {
+    @apply flex items-center space-y-0 space-x-10;
+  }
+
+  .doctor-main .preview {
+    @apply max-w-md mb-0 flex-1;
+  }
+
+  .doctor-main .caption {
+    @apply flex-[1.5];
+  }
+
+  .doctor-symptoms .symptoms {
+    @apply grid-cols-4;
+  }
+}
+
+@screen lg {
+  .doctor-view-section-title {
+    @apply text-3xl mb-5;
+  }
+
+  .doctor-view-section p {
+    @apply text-lg;
+  }
+
+  .doctor-view {
+    @apply space-y-16;
+  }
+
+  .doctor-main .name {
+    @apply text-4xl;
+  }
+
+  .doctor-main .category {
+    @apply text-2xl;
+  }
+
+  .doctor-main .line-with-icon {
+    @apply text-lg;
+  }
+
+  .doctor-main .meta-item {
+    @apply text-xl;
+  }
+
+  .doctor-symptoms .symptom {
+    @apply py-10 px-6 text-lg;
+  }
+}
