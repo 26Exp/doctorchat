@@ -5,90 +5,66 @@
         <article class="doctor-view">
             <div class="doctor-main">
                 <div class="preview">
-                    <img
-                        src="https://www.pinnaclecare.com/wp-content/uploads/2017/12/bigstock-African-young-doctor-portrait-28825394.jpg" />
+                    <img src="{{ get_field('avatar') }}" alt="{{ the_title() }} - " />
                 </div>
                 <div class="caption">
-                    <h1 class="name">Dr. Oxana Turcu</h1>
-                    <h3 class="category">Pediatru</h3>
+                    <h1 class="name">{{ get_field('prefix', 'options') }} {{ the_title() }}</h1>
+                    <h3 class="category">{{ get_field('specialization') }}</h3>
                     <p class="line-with-icon">
-                        <span class="icon">
-                            <img src="@asset('svgs/map-pin.svg')" />
-                        </span>
-                        <span class="text">Moldova, Chisinau</span>
+                        <span class="icon"><img src="@asset('svgs/map-pin.svg')" /></span>
+                        <span class="text">{{ get_field('location') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon">
-                            <img src="@asset('svgs/building.svg')" />
-                        </span>
-                        <span class="text">MEDPARK</span>
+                        <span class="icon"> <img src="@asset('svgs/building.svg')" /></span>
+                        <span class="text">{{ get_field('workplace') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon">
-                            <img src="@asset('svgs/language.svg')" />
-                        </span>
-                        <span class="text">Romina, rusa</span>
+                        <span class="icon"><img src="@asset('svgs/language.svg')" /></span>
+                        <span class="text">{{ get_field('languages') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon">
-                            <img src="@asset('svgs/briefcase.svg')" />
-                        </span>
-                        <span class="text">8 ani</span>
+                        <span class="icon"><img src="@asset('svgs/briefcase.svg')" /></span>
+                        <span class="text">{{ get_field('experience') . ' ' . get_field('years', 'options') }}</span>
                     </p>
                     <div class="meta">
                         <div class="meta-item">
-                            <span>
-                                <img src="@asset('svgs/message.svg')" />
-                            </span>
-                            <span>120 mdl</span>
+                            <span><img src="@asset('svgs/message.svg')" /></span>
+                            <span>{{ get_field('price_chat') . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                         <div class="meta-item">
-                            <span>
-                                <img src="@asset('svgs/video.svg')" />
-                            </span>
-                            <span>200 mdl</span>
+                            <span><img src="@asset('svgs/video.svg')" /></span>
+                            <span>{{ get_field('price_video') . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                     </div>
-                    <button class="action">Programează o consultație</button>
+                    <button class="action">{{ get_field('book_now', 'options') }}</button>
                 </div>
             </div>
             <div class="doctor-view-section doctor-about">
-                <h4 class="doctor-view-section-title">Despre</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                </p>
+                <h4 class="doctor-view-section-title">{{ get_field('about', 'options') }}</h4>
+                <p>{{ get_field('about') }}</p>
             </div>
+            @if(get_the_terms( $post->ID, 'symptoms' ))
             <div class="doctor-view-section doctor-symptoms">
-                <h4 class="doctor-view-section-title">Simptome</h4>
+                <h4 class="doctor-view-section-title">{{ get_field('symptoms', 'options') }}</h4>
                 <div class="symptoms">
-                    <div class="symptom">
-                        <span class="icon"><img src="@asset('svgs/symptoms/example.svg')" /></span>
-                        <span>Febra</span>
-                    </div>
-                    <div class="symptom">
-                        <span class="icon"><img src="@asset('svgs/symptoms/example.svg')" /></span>
-                        <span>Dureri de cap</span>
-                    </div>
-                    <div class="symptom">
-                        <span class="icon"><img src="@asset('svgs/symptoms/example.svg')" /></span>
-                        <span>Dureri in piept</span>
-                    </div>
-                    <div class="symptom">
-                        <span class="icon"><img src="@asset('svgs/symptoms/example.svg')" /></span>
-                        <span>Dureri in gat</span>
-                    </div>
+                    @foreach(get_the_terms( $post->ID, 'symptoms' ) as $symptom)
+                        <div class="symptom">
+                            <span class="icon"><img src="{{ get_field('image', $symptom) }}" /></span>
+                            <span class="text">{{ $symptom->name }}</span>
+                        </div>
+                    @endforeach
                 </div>
             </div>
+            @endif
+
+
+            @if(count(get_reviews()))
             <div class="doctor-view-section doctor-review">
-                <h4 class="doctor-view-section-title">Recenzii</h4>
+                <h4 class="doctor-view-section-title">{{ get_field('reviews', 'options') }}</h4>
                 <div class="relative">
                     <div id="testimonials" class="swiper testimonials-slider">
                         <div class="swiper-wrapper">
-                            @foreach (get_field('reviews') as $review)
+                            @foreach (get_reviews() as $review)
                                 <div class="swiper-slide">
                                     <div class="testimonials-slide">
                                         <h3 class="title">{{ get_field('author', $review->ID) }}</h3>
@@ -97,7 +73,6 @@
                                 </div>
                             @endforeach
                         </div>
-
                         <div class="swiper-button-prev">
                             <img src="@asset('svgs/arrow-left.svg')" alt="Previous Slide" />
                         </div>
@@ -107,86 +82,33 @@
                     </div>
                 </div>
             </div>
+            @endif
+
+            @if(count(get_articles()))
             <div class="doctor-view-section doctor-articles">
-                <h4 class="doctor-view-section-title">Articole publicate</h4>
+                <h4 class="doctor-view-section-title">{{ get_field('published_articles', 'options') }} ({{ count(get_articles()) }})</h4>
                 <div class="actual-blogs-list">
-                    <a class="actual-blog @if ($i == 1) large @endif " href="{{ the_permalink() }}">
+                    @foreach (get_articles() as $article)
+                      <a class="actual-blog" href="{{ get_permalink($article->ID) }}">
                         <article>
-                            <div class="actual-blog-preview">
-                                <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'full') }}"
-                                    alt="{{ get_the_title() }}" />
+                          <div class="actual-blog-preview">
+                            <img src="{{ get_the_post_thumbnail_url($article->ID) }}" alt="{{ $article->post_title }}" />
+                          </div>
+                          <div class="actual-blog-caption">
+                            <h3 class="actual-blog-title">
+                              {{ $article->post_title }}
+                            </h3>
+                            <div class="actual-blog-meta">
+                              <span>{{ the_title() }}</span>
+                              <span>{{ get_the_date('d M Y', $article->ID)}}</span>
                             </div>
-                            <div class="actual-blog-caption">
-                                <span class="actual-blog-category">{{ get_the_category()[0]->name }}</span>
-                                <h3 class="actual-blog-title">
-                                    {{ get_the_title() }}
-                                </h3>
-                                <div class="actual-blog-meta">
-                                    <span>{{ get_the_author() }}</span>
-                                    <span>{{ get_the_date('d M Y') }}</span>
-                                </div>
-                                <p class="actual-blog-description">
-                                    @if ($i == 1)
-                                        {{ wp_trim_words(get_the_content(), 25, '...') }}
-                                    @else
-                                        {{ wp_trim_words(get_the_content(), 20, '...') }}
-                                    @endif
-                                </p>
-                            </div>
+                          </div>
                         </article>
-                    </a>
-                    <a class="actual-blog @if ($i == 1) large @endif " href="{{ the_permalink() }}">
-                        <article>
-                            <div class="actual-blog-preview">
-                                <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'full') }}"
-                                    alt="{{ get_the_title() }}" />
-                            </div>
-                            <div class="actual-blog-caption">
-                                <span class="actual-blog-category">{{ get_the_category()[0]->name }}</span>
-                                <h3 class="actual-blog-title">
-                                    {{ get_the_title() }}
-                                </h3>
-                                <div class="actual-blog-meta">
-                                    <span>{{ get_the_author() }}</span>
-                                    <span>{{ get_the_date('d M Y') }}</span>
-                                </div>
-                                <p class="actual-blog-description">
-                                    @if ($i == 1)
-                                        {{ wp_trim_words(get_the_content(), 25, '...') }}
-                                    @else
-                                        {{ wp_trim_words(get_the_content(), 20, '...') }}
-                                    @endif
-                                </p>
-                            </div>
-                        </article>
-                    </a>
-                    <a class="actual-blog @if ($i == 1) large @endif " href="{{ the_permalink() }}">
-                        <article>
-                            <div class="actual-blog-preview">
-                                <img src="{{ get_the_post_thumbnail_url(get_the_ID(), 'full') }}"
-                                    alt="{{ get_the_title() }}" />
-                            </div>
-                            <div class="actual-blog-caption">
-                                <span class="actual-blog-category">{{ get_the_category()[0]->name }}</span>
-                                <h3 class="actual-blog-title">
-                                    {{ get_the_title() }}
-                                </h3>
-                                <div class="actual-blog-meta">
-                                    <span>{{ get_the_author() }}</span>
-                                    <span>{{ get_the_date('d M Y') }}</span>
-                                </div>
-                                <p class="actual-blog-description">
-                                    @if ($i == 1)
-                                        {{ wp_trim_words(get_the_content(), 25, '...') }}
-                                    @else
-                                        {{ wp_trim_words(get_the_content(), 20, '...') }}
-                                    @endif
-                                </p>
-                            </div>
-                        </article>
-                    </a>
+                      </a>
+                    @endforeach
                 </div>
             </div>
+            @endif
         </article>
     </section>
 @endsection

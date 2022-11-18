@@ -14,15 +14,16 @@
             <div class="doctors-page">
               <x-specialities-list-component />
                 <div class="doctors-grid">
-                    @if (!have_posts())
+                    @if (!count(get_doctors_by_speciality_id( get_queried_object()->term_id )))
                         <div class="alert alert-warning">
                             {{ __('Sorry, no results were found.', 'sage') }}
                         </div>
                     @endif
 
-                    @while (have_posts()) @php the_post() @endphp
-                        <x-doctor-card-component :post="get_post()" />
-                    @endwhile
+                    @foreach(get_doctors_by_speciality_id( get_queried_object()->term_id ) as $doctor)
+                        <x-doctor-card-component :post="$doctor" />
+                    @endforeach
+
                 </div>
             </div>
         </div>
