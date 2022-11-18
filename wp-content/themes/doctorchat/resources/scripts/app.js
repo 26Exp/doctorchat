@@ -22,10 +22,11 @@ import.meta.webpackHot?.accept(main);
 
 function mobileNavigation() {
   const tirgger = document.querySelector("#mobile-menu-tirgger");
+
+  if (!tirgger) return;
+
   const menu = document.querySelector("#mobile-menu .mobile-navigation");
-  const backdrop = document.querySelector(
-    "#mobile-menu .mobile-navigation-backdrop"
-  );
+  const backdrop = document.querySelector("#mobile-menu .mobile-navigation-backdrop");
 
   tirgger.addEventListener("click", () => {
     menu.classList.toggle("open");
@@ -47,6 +48,8 @@ function mobileNavigation() {
 }
 
 function testimonialsSlider() {
+  if (!document.querySelector("#testimonials")) return;
+
   new Swiper("#testimonials", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -69,10 +72,11 @@ function testimonialsSlider() {
 
 function doctorsCategories() {
   const tirgger = document.querySelector("#mobile-categories-trigger");
+
+  if (!tirgger) return;
+
   const menu = document.querySelector("#mobile-categories .mobile-categories");
-  const backdrop = document.querySelector(
-    "#mobile-categories .mobile-categories-backdrop"
-  );
+  const backdrop = document.querySelector("#mobile-categories .mobile-categories-backdrop");
 
   tirgger.addEventListener("click", () => {
     menu.classList.toggle("open");
