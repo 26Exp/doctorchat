@@ -68,6 +68,25 @@ function testimonialsSlider() {
   });
 }
 
+function doctorViewTestimonialsSlider() {
+  if (!document.querySelector("#doctor-view-testimonials")) return;
+
+  new Swiper("#doctor-view-testimonials", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      850: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
+
 function doctorsCategories() {
   const tirgger = document.querySelector("#mobile-categories-trigger");
 

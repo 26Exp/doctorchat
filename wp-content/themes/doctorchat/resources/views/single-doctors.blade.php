@@ -62,7 +62,7 @@
             <div class="doctor-view-section doctor-review">
                 <h4 class="doctor-view-section-title">{{ get_field('reviews', 'options') }}</h4>
                 <div class="relative">
-                    <div id="testimonials" class="swiper testimonials-slider">
+                    <div id="doctor-view-testimonials" class="swiper testimonials-slider">
                         <div class="swiper-wrapper">
                             @foreach (get_reviews() as $review)
                                 <div class="swiper-slide">
