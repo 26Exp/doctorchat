@@ -3,23 +3,31 @@
 }
 
 .categories {
-  @apply mr-14;
+  @apply mr-6 border-2 border-doctorchat-turquoise p-4 rounded-lg relative;
+}
+
+.categories header {
+  @apply absolute top-0 left-3 -translate-y-1/2 z-10 bg-white px-1;
+}
+
+.categories-title {
+  @apply text-lg font-bold text-doctorchat-turquoise;
 }
 
 .categories-nav {
-  @apply flex flex-col min-w-[267px] space-y-2;
+  @apply flex flex-col space-y-1 py-2 w-56;
 }
 
 .categories-link {
-  @apply text-doctorchat-gray text-xl py-3 px-4 border-2 border-doctorchat-turquoise rounded-2xl transition-colors hover:bg-doctorchat-turquoise/40;
+  @apply text-doctorchat-gray whitespace-nowrap transition-colors hover:underline;
 }
 
 .categories-link.active {
-  @apply bg-doctorchat-turquoise text-white;
+  @apply text-doctorchat-turquoise;
 }
 
 .doctors-grid {
-  @apply grid gap-9;
+  @apply grid gap-7;
 }
 
 .doctor-card {
@@ -68,7 +76,7 @@
 }
 
 .mobile-categories {
-  @apply fixed top-0 left-0 z-50 h-full w-3/4 max-w-sm -translate-x-full transform bg-white px-5 py-12 opacity-0 transition-all duration-150 will-change-transform;
+  @apply fixed top-0 left-0 z-50 h-full w-3/4 max-w-xs -translate-x-full transform bg-white p-4 opacity-0 transition-all duration-150 will-change-transform;
 }
 
 .mobile-categories.open {
@@ -84,15 +92,15 @@
 }
 
 .mobile-categories-link {
-  @apply inline-block text-xl font-bold text-doctorchat-blue transition-colors hover:text-doctorchat-blue/70;
+  @apply text-doctorchat-gray text-lg whitespace-nowrap transition-colors hover:underline;
 }
 
 .mobile-categories-link.active {
-  @apply text-doctorchat-red;
+  @apply text-doctorchat-turquoise;
 }
 
 .mobile-categories-nav {
-  @apply space-y-6 py-5 flex flex-col items-start overflow-y-auto;
+  @apply space-y-2.5 my-2 flex flex-col items-start overflow-y-auto;
 }
 
 @screen sm {
@@ -109,7 +117,7 @@
 
 @screen xl {
   .categories {
-    @apply mr-24;
+    @apply mr-9;
   }
 
   .doctors-grid {
@@ -171,7 +179,7 @@
 }
 
 .doctor-symptoms .symptoms {
-  @apply grid grid-cols-2 gap-2;
+  @apply grid grid-cols-2 gap-2 text-center;
 }
 
 .doctor-symptoms .symptom {

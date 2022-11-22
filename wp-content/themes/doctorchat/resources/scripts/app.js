@@ -26,7 +26,9 @@ function mobileNavigation() {
   if (!tirgger) return;
 
   const menu = document.querySelector("#mobile-menu .mobile-navigation");
-  const backdrop = document.querySelector("#mobile-menu .mobile-navigation-backdrop");
+  const backdrop = document.querySelector(
+    "#mobile-menu .mobile-navigation-backdrop"
+  );
 
   tirgger.addEventListener("click", () => {
     menu.classList.toggle("open");
@@ -40,10 +42,6 @@ function mobileNavigation() {
     if (e.code === "Escape") {
       menu.classList.remove("open");
     }
-  });
-
-  document.addEventListener("scroll", () => {
-    menu.classList.remove("open");
   });
 }
 
@@ -76,7 +74,9 @@ function doctorsCategories() {
   if (!tirgger) return;
 
   const menu = document.querySelector("#mobile-categories .mobile-categories");
-  const backdrop = document.querySelector("#mobile-categories .mobile-categories-backdrop");
+  const backdrop = document.querySelector(
+    "#mobile-categories .mobile-categories-backdrop"
+  );
 
   tirgger.addEventListener("click", () => {
     menu.classList.toggle("open");
@@ -90,10 +90,6 @@ function doctorsCategories() {
     if (e.code === "Escape") {
       menu.classList.remove("open");
     }
-  });
-
-  document.addEventListener("scroll", () => {
-    menu.classList.remove("open");
   });
 }
 
