@@ -4,20 +4,20 @@
       <img src="{{ $avatar }}" alt="{{ $name }}" />
     </div>
     <div class="doctor-caption">
-      <h3 class="doctor-name">{{ $name }}</h3>
-      <h6 class="doctor-category">{{ $speciality }}</h6>
+      <h2 class="doctor-name">{{ $name }}</h2>
+      <h3 class="doctor-category">{{ $speciality }}</h3>
       <div class="doctor-meta">
         <div class="doctor-meta-item">
           <span>
-            <img src="@asset('svgs/message.svg')" />
+            <img src="@asset('svgs/message.svg')" alt="message price"/>
           </span>
-          <span>{{ $priceChat }} mdl</span>
+          <span>{{ $priceChat }} {{ get_field('currency', 'options') }}</span>
         </div>
         <div class="doctor-meta-item">
           <span>
-            <img src="@asset('svgs/video.svg')" />
+            <img src="@asset('svgs/video.svg')" alt="video price"/>
           </span>
-          <span>{{ $priceVideo }} mdl</span>
+          <span>{{ $priceVideo }} {{ get_field('currency', 'options') }}</span>
         </div>
       </div>
     </div>
