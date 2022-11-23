@@ -25,6 +25,10 @@ body.home .doctorchat-header {
   @apply min-h-[48px] px-5 py-2 text-xl font-bold leading-none text-white;
 }
 
+.btn-outline {
+  @apply bg-transparent border-transparent border-2 border-white text-white hover:bg-white hover:text-doctorchat-red;
+}
+
 @screen lg {
   .btn-default {
     @apply min-h-[86px] px-12 py-5 text-3xl leading-none;

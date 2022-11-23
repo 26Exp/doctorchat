@@ -28,10 +28,15 @@
                         </ul>
                     </div>
                 </main>
-                <footer class="mt-14 flex justify-center lg:mt-16 lg:justify-start">
+                <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
                     <a href="{{ get_field('cta_button_url') }}">
                         <button class="btn btn-default">{{ get_field('cta_button') }}</button>
                     </a>
+                  @if(get_field('cta_doctors'))
+                    <a href="{{ get_field('cta_doctors_button_url') }}">
+                      <button class="btn btn-default btn-outline">{{ get_field('cta_doctors_button') }}</button>
+                    </a>
+                  @endif
                 </footer>
             </div>
         </div>
