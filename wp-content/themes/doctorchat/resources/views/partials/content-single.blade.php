@@ -5,44 +5,14 @@
             <h1 class="entry-title">
                 {!! $title !!}
             </h1>
-
-            @include('partials.entry-meta')
+          <x-post-author-entry-meta />
         </header>
 
         <div class="entry-content">
             @php(the_content())
         </div>
 
-        <div class="entry-meta">
-            <figure class="relative flex flex-col-reverse not-prose bg-slate-50 p-6 rounded-lg">
-                <blockquote class="mt-4 text-doctorchat-gray">
-                    <p class="text-base font-normal">Diagnosticul, tratamentul și prevenirea bolilor de rinichi.
-                        Infectii urinare: pielonefrite, uretrite, cistite.
-                        Litiaza renală (formare de calculi renali ce se pot localiza în rinichi, uretere, vezică).
-                        Nefropatie gutoasa, nefropatie hipertensiva, nefropatie diabetica.
-                        Boala cronica de rinichi, boli chistice ale rinichiului, glomerulonefrite.</p>
-                    <a href="#"
-                        class="mt-4 inline-flex items-center text-sm text-doctorchat-gray py-2 px-10 bg-gray-200 transition-colors hover:bg-gray-300">
-                        <span>{{ __('See Details', 'sage') }}</span>
-                        <span class="ml-2">
-                            <img class="w-5" src="@asset('svgs/chevron-right.svg')" />
-                        </span>
-                    </a>
-                </blockquote>
-                <figcaption class="flex items-center space-x-4">
-                    <img src="https://tailwindcss.com/_next/static/media/ryan-florence.3af9c9d9.jpg" alt=""
-                        class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy" decoding="async">
-                    <div class="flex-auto">
-                        <div class="text-base text-doctorchat-gray font-semibold">
-                            <a href="https://twitter.com/ryanflorence/status/1187951799442886656" tabindex="0">
-                                {{ __('About', 'sage') }} {{ get_the_author() }}
-                            </a>
-                        </div>
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-
+        <x-post-author-card-meta />
         <footer>
             {!! wp_link_pages([
                 'echo' => 0,
