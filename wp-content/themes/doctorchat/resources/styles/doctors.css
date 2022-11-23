@@ -76,7 +76,7 @@
 }
 
 .mobile-categories {
-  @apply fixed top-0 left-0 z-50 h-full w-3/4 max-w-xs -translate-x-full transform bg-white p-4 opacity-0 transition-all duration-150 will-change-transform;
+  @apply fixed top-0 left-0 z-50 h-full w-3/4 max-w-xs -translate-x-full transform bg-white p-4 opacity-0 transition-all duration-150 will-change-transform overflow-y-auto;
 }
 
 .mobile-categories.open {
