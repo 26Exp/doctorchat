@@ -14,8 +14,8 @@
         </div>
 
         <div class="entry-meta">
-            <figure class="relative flex flex-col-reverse not-prose">
-                <blockquote class="mt-4 text-doctorchat-gray ">
+            <figure class="relative flex flex-col-reverse not-prose bg-slate-50 p-6 rounded-lg">
+                <blockquote class="mt-4 text-doctorchat-gray">
                     <p class="text-base font-normal">Diagnosticul, tratamentul și prevenirea bolilor de rinichi.
                         Infectii urinare: pielonefrite, uretrite, cistite.
                         Litiaza renală (formare de calculi renali ce se pot localiza în rinichi, uretere, vezică).

@@ -1,4 +1,4 @@
-<figure class="relative not-prose">
+<figure class="relative not-prose bg-slate-50 p-6 rounded-lg">
   <figcaption class="flex items-center space-x-4">
     <img src="https://tailwindcss.com/_next/static/media/ryan-florence.3af9c9d9.jpg" alt="" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy" decoding="async">
     <div class="flex-auto">
