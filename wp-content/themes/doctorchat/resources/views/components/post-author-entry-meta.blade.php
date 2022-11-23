@@ -1,6 +1,6 @@
 <figure class="relative not-prose bg-slate-50 p-6 rounded-lg">
   <figcaption class="flex items-center space-x-4">
-    <img src="{{ $avatar }}" alt="{{ $name }}" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy" decoding="async">
+    <img src="{{ $avatar }}" alt="{{ $name }}" class="flex-none w-14 h-14 rounded-full object-cover" decoding="async">
     <div class="flex-auto">
       <div class="text-base text-doctorchat-gray font-semibold">
         <a href="{{ $url }}" tabindex="0">
