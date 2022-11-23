@@ -100,8 +100,8 @@ class WP_Textdomain_Registry {
 	 * @param string|false $path   Language directory path or false if there is none available.
 	 */
 	public function set( $domain, $locale, $path ) {
-		$this->all[ $domain ][ $locale ] = $path ? trailingslashit( $path ) : false;
-		$this->current[ $domain ]        = $this->all[ $domain ][ $locale ];
+//		$this->all[ $domain ][ $locale ] = $path ? function_exists(trailingslashit()) && trailingslashit( $path ) : false;
+//		$this->current[ $domain ]        = $this->all[ $domain ][ $locale ];
 	}
 
 	/**
