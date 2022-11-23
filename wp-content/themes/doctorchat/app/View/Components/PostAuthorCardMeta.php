@@ -37,7 +37,7 @@ class PostAuthorCardMeta extends Component
             $this->name = $doctor[0]->post_title;
             $this->avatar = get_field('avatar', $doctor[0]->ID);
             $this->specialization = get_field('specialization', $doctor[0]->ID);
-            $this->about = wp_trim_words(get_field('about', $doctor[0]->ID), 30) . '...';
+            $this->about = get_field('about', $doctor[0]->ID);
             $this->date = get_post_time('c', true);
             $this->url = get_permalink($doctor[0]->ID);
         }
