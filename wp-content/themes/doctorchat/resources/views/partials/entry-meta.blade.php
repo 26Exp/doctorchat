@@ -4,7 +4,7 @@
     <div class="flex-auto">
       <div class="text-base text-doctorchat-gray font-semibold">
         <a href="https://twitter.com/ryanflorence/status/1187951799442886656" tabindex="0">
-          <span class="absolute inset-0"></span>{{ get_the_author() }}
+          {{ get_the_author() }}
         </a>
         <time class="font-normal ml-1 before:content-['•'] before:pr-1" datetime="{{ get_post_time('c', true) }}">
           {{ get_the_date() }}

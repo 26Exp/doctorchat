@@ -21,6 +21,13 @@
                         Litiaza renală (formare de calculi renali ce se pot localiza în rinichi, uretere, vezică).
                         Nefropatie gutoasa, nefropatie hipertensiva, nefropatie diabetica.
                         Boala cronica de rinichi, boli chistice ale rinichiului, glomerulonefrite.</p>
+                    <a href="#"
+                        class="mt-4 inline-flex items-center text-sm text-doctorchat-gray py-2 px-10 bg-gray-200 transition-colors hover:bg-gray-300">
+                        <span>{{ __('See Details', 'sage') }}</span>
+                        <span class="ml-2">
+                            <img class="w-5" src="@asset('svgs/chevron-right.svg')" />
+                        </span>
+                    </a>
                 </blockquote>
                 <figcaption class="flex items-center space-x-4">
                     <img src="https://tailwindcss.com/_next/static/media/ryan-florence.3af9c9d9.jpg" alt=""
@@ -28,7 +35,7 @@
                     <div class="flex-auto">
                         <div class="text-base text-doctorchat-gray font-semibold">
                             <a href="https://twitter.com/ryanflorence/status/1187951799442886656" tabindex="0">
-                                {{ __('About', 'sage') }} <span class="absolute inset-0"></span>{{ get_the_author() }}
+                                {{ __('About', 'sage') }} {{ get_the_author() }}
                             </a>
                         </div>
                     </div>
