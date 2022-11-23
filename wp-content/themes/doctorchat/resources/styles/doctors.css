@@ -175,7 +175,7 @@
 }
 
 .doctor-main .action {
-  @apply bg-doctorchat-turquoise text-white font-medium py-3 px-5 rounded-md transition-colors hover:bg-doctorchat-turquoise/70 text-lg;
+  @apply bg-doctorchat-teal text-white font-medium py-3 px-5 rounded-md transition-colors hover:bg-doctorchat-turquoise/80 text-lg;
 }
 
 .doctor-symptoms .symptoms {

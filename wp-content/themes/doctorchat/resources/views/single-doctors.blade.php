@@ -5,34 +5,34 @@
         <article class="doctor-view">
             <div class="doctor-main">
                 <div class="preview">
-                    <img src="{{ get_field('avatar') }}" alt="{{ the_title() }} - " />
+                    <img src="{{ get_field('avatar') }}" alt="{{ the_title() }} - {{ get_field('specialization') }}" />
                 </div>
                 <div class="caption">
                     <h1 class="name">{{ get_field('prefix', 'options') }} {{ the_title() }}</h1>
-                    <h3 class="category">{{ get_field('specialization') }}</h3>
+                    <h2 class="category">{{ get_field('specialization') }}</h2>
                     <p class="line-with-icon">
-                        <span class="icon"><img src="@asset('svgs/map-pin.svg')" /></span>
+                        <span class="icon"><img src="@asset('svgs/map-pin.svg')" alt="location"/></span>
                         <span class="text">{{ get_field('location') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon"> <img src="@asset('svgs/building.svg')" /></span>
+                        <span class="icon"> <img src="@asset('svgs/building.svg')" alt="workplace"/></span>
                         <span class="text">{{ get_field('workplace') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon"><img src="@asset('svgs/language.svg')" /></span>
+                        <span class="icon"><img src="@asset('svgs/language.svg')" alt="language"/></span>
                         <span class="text">{{ get_field('languages') }}</span>
                     </p>
                     <p class="line-with-icon">
-                        <span class="icon"><img src="@asset('svgs/briefcase.svg')" /></span>
+                        <span class="icon"><img src="@asset('svgs/briefcase.svg')" alt="experience"/></span>
                         <span class="text">{{ get_field('experience') . ' ' . get_field('years', 'options') }}</span>
                     </p>
                     <div class="meta">
                         <div class="meta-item">
-                            <span><img src="@asset('svgs/message.svg')" /></span>
+                            <span><img src="@asset('svgs/message.svg')" alt="chat "/></span>
                             <span>{{ get_field('price_chat') . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                         <div class="meta-item">
-                            <span><img src="@asset('svgs/video.svg')" /></span>
+                            <span><img src="@asset('svgs/video.svg')" alt="video"/></span>
                             <span>{{ get_field('price_video') . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                     </div>
@@ -42,16 +42,16 @@
                 </div>
             </div>
             <div class="doctor-view-section doctor-about">
-                <h4 class="doctor-view-section-title">{{ get_field('about', 'options') }}</h4>
+                <h3 class="doctor-view-section-title">{{ get_field('about', 'options') }}</h3>
                 <p>{{ get_field('about') }}</p>
             </div>
             @if(get_the_terms( $post->ID, 'symptoms' ))
             <div class="doctor-view-section doctor-symptoms">
-                <h4 class="doctor-view-section-title">{{ get_field('symptoms', 'options') }}</h4>
+                <h3 class="doctor-view-section-title">{{ get_field('symptoms', 'options') }}</h3>
                 <div class="symptoms">
                     @foreach(get_the_terms( $post->ID, 'symptoms' ) as $symptom)
                         <div class="symptom">
-                            <span class="icon"><img src="{{ get_field('image', $symptom) }}" /></span>
+                            <span class="icon"><img src="{{ get_field('image', $symptom) }}" alt="{{ $symptom->name }}"/></span>
                             <span class="text">{{ $symptom->name }}</span>
                         </div>
                     @endforeach
@@ -59,17 +59,16 @@
             </div>
             @endif
 
-
             @if(count(get_reviews()))
             <div class="doctor-view-section doctor-review">
-                <h4 class="doctor-view-section-title">{{ get_field('reviews', 'options') }}</h4>
+                <h3 class="doctor-view-section-title">{{ get_field('reviews', 'options') }}</h3>
                 <div class="relative">
                     <div id="doctor-view-testimonials" class="swiper testimonials-slider">
                         <div class="swiper-wrapper">
                             @foreach (get_reviews() as $review)
                                 <div class="swiper-slide">
                                     <div class="testimonials-slide">
-                                        <h3 class="title">{{ get_field('author', $review->ID) }}</h3>
+                                        <h4 class="title">{{ get_field('author', $review->ID) }}</h4>
                                         <p class="description">{{ get_field('review', $review->ID) }}</p>
                                     </div>
                                 </div>
@@ -88,7 +87,7 @@
 
             @if(count(get_articles()))
             <div class="doctor-view-section doctor-articles">
-                <h4 class="doctor-view-section-title">{{ get_field('published_articles', 'options') }} ({{ count(get_articles()) }})</h4>
+                <h3 class="doctor-view-section-title">{{ get_field('published_articles', 'options') }} ({{ count(get_articles()) }})</h3>
                 <div class="actual-blogs-list">
                     @foreach (get_articles() as $article)
                       <a class="actual-blog" href="{{ get_permalink($article->ID) }}">
@@ -97,9 +96,9 @@
                             <img src="{{ get_the_post_thumbnail_url($article->ID) }}" alt="{{ $article->post_title }}" />
                           </div>
                           <div class="actual-blog-caption">
-                            <h3 class="actual-blog-title">
+                            <h4 class="actual-blog-title">
                               {{ $article->post_title }}
-                            </h3>
+                            </h4>
                             <div class="actual-blog-meta">
                               <span>{{ the_title() }}</span>
                               <span>{{ get_the_date('d M Y', $article->ID)}}</span>
