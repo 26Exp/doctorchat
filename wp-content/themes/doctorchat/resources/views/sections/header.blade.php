@@ -1,7 +1,7 @@
 <header class="doctorchat-header top-0 left-0 z-20 w-full bg-doctorchat-turquoise">
   <div class="dc-container">
-    <div class="flex items-center justify-between py-7 md:py-8">
-      <a href="{{ home_url('/') }}">
+    <div class="doctorchat-header-content flex items-center justify-between py-7 md:py-8">
+      <a class="-translate-y-1.5" href="{{ home_url('/') }}">
         <img class="w-36 xl:w-60" src="@asset('svgs/logo.svg')" alt="Doctorchat Logo" />
       </a>
       @if (has_nav_menu('primary_navigation'))

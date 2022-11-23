@@ -8,6 +8,10 @@ body.home .doctorchat-header {
   @apply bg-transparent absolute;
 }
 
+body.home .doctorchat-header-content {
+  @apply py-8 md:py-16;
+}
+
 /* Globals */
 .dc-container {
   @apply mx-auto max-w-screen-2xl px-5 md:px-8 xl:px-20 lg:px-14;
