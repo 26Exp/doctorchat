@@ -4,7 +4,7 @@
       <p class="text-base font-normal">{{ $about }}</p>
       <a href="{{ $url }}"
          class="mt-4 inline-flex items-center text-sm text-doctorchat-gray py-2 px-10 bg-gray-200 transition-colors hover:bg-gray-300">
-        <span>{{ get_field('doctor_profile') }}</span>
+        <span>{{ get_field('doctor_profile', 'options') }}</span>
         <span class="ml-2">
           <img class="w-5" src="@asset('svgs/chevron-right.svg')" alt="arrow right" />
         </span>
