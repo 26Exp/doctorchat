@@ -116,4 +116,5 @@ window.addEventListener("DOMContentLoaded", () => {
   mobileNavigation();
   testimonialsSlider();
   doctorsCategories();
+  doctorViewTestimonialsSlider();
 });
