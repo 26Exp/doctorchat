@@ -7,7 +7,7 @@ use Illuminate\View\Component;
 class DoctorCardComponent extends Component
 {
     public string $name;
-    public string $speciality;
+    public string $specialization;
     public string $avatar;
     public string $permalink;
     public string $priceChat;
@@ -19,9 +19,8 @@ class DoctorCardComponent extends Component
      */
     public function __construct($post)
     {
-
         $this->name = $post->post_title;
-        $this->speciality = get_the_terms($post->ID, 'speciality')[0]->name;
+        $this->specialization = get_field('specialization', $post->ID) ?? '';
         $this->avatar = get_field('avatar', $post->ID) ?? asset('svgs/doctor.svg');
         $this->permalink = get_permalink($post->ID);
         $this->priceChat = get_field('price_chat', $post->ID) ?? '-';
@@ -35,11 +34,10 @@ class DoctorCardComponent extends Component
      */
     public function render()
     {
-
         return view('components.doctor-card-component',
             [
                 'name' => $this->name,
-                'speciality' => $this->speciality,
+                'specialization' => $this->specialization,
                 'avatar' => $this->avatar,
                 'permalink' => $this->permalink,
                 'priceChat' => $this->priceChat,

@@ -9,7 +9,20 @@
         {{ get_the_title() }}
       </h3>
       <div class="actual-blog-meta">
-        <span>{{ get_the_author() }}</span>
+        @php
+        $doctor = get_posts([
+                'post_type' => 'doctors',
+                'meta_query' => [
+                    [
+                        'key' => 'doctor',
+                        'value' => get_the_author_meta('ID'),
+                        'compare' => '=',
+                    ],
+                ],
+            ]);
+        @endphp
+
+        <span>{{ $doctor[0]->post_title ?? '' }}</span>
         <span>{{ get_the_date('d M Y')}}</span>
       </div>
       <p class="actual-blog-description">

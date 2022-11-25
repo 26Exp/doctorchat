@@ -2,7 +2,7 @@
   <div class="mobile-categories">
     <nav class="mobile-categories-nav">
       @foreach ($specialities as $speciality)
-        <a class="mobile-categories-link {{ $speciality['is_active'] }}" href="{{ $speciality['permalink'] }}">{{ $speciality['name'] }}</a>
+        <a rel="tag" class="mobile-categories-link {{ $speciality['is_active'] }}" href="{{ $speciality['permalink'] }}">{{ $speciality['name'] }}</a>
       @endforeach
     </nav>
   </div>

@@ -11,7 +11,7 @@
   </header>
   <nav class="categories-nav">
     @foreach ($specialities as $speciality)
-      <a class="categories-link {{ $speciality['is_active'] }}" href="{{ $speciality['permalink'] }}">{{ $speciality['name'] }}</a>
+      <a rel="tag" class="categories-link {{ $speciality['is_active'] }}" href="{{ $speciality['permalink'] }}">{{ $speciality['name'] }}</a>
     @endforeach
   </nav>
 </div>

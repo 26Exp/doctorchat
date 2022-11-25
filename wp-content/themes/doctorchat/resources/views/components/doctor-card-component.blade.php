@@ -5,7 +5,7 @@
     </div>
     <div class="doctor-caption">
       <h2 class="doctor-name">{{ $name }}</h2>
-      <h3 class="doctor-category">{{ $speciality }}</h3>
+      <h3 class="doctor-category">{{ $specialization }}</h3>
       <div class="doctor-meta">
         <div class="doctor-meta-item">
           <span>

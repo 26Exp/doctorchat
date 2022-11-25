@@ -215,24 +215,26 @@
     <!-- Banner End -->
 
     <!-- Blogs Start -->
-    <section>
-        <div class="blogs-list">
+    <section class="py-2 md:py-2 lg:py-8">
+      <div class="dc-container max-w-7xl">
+            @php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                    'post_status' => 'publish',
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                );
+                $posts = new WP_Query($args);
+            @endphp
+          <div class="actual-blogs-list">
+            @php($i = 1)
+            @while($posts->have_posts()) @php($posts->the_post())
+              @include('partials.blog-card', ['i' => 2])
+            @endwhile
 
-            @foreach (get_field('blog_posts') as $blog)
-                <article class="blog">
-                    <div class="caption">
-                        <a class="block w-full" href="{{ get_the_permalink($blog['post']->ID) }}">
-                            <h3 class="title">{{ get_the_title($blog['post']->ID) }}</h3>
-                            <p class="description">{{ $blog['short_description'] }}</p>
-                            <button class="btn btn-small">{{ __('Read more') }}</button>
-                        </a>
-                    </div>
-                    <div class="preview">
-                        <img src="{{ $blog['image'] }}" alt="{{ get_the_title($blog['post']->ID) }}" />
-                    </div>
-                </article>
-            @endforeach
-        </div>
+          </div>
+      </div>
     </section>
     <!-- Blogs End -->
 
