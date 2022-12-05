@@ -36,7 +36,7 @@
                             <span>{{ get_field('price_video') . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                     </div>
-                    <a rel="nofollow" href="https://app.doctorchat.md/doctors?id={{ get_field('app_id') }}">
+                    <a rel="nofollow" href="https://dev.doctorchat.md/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}&locale={{ get_field('app_locale', 'options') }}">
                       <button class="action">{{ get_field('book_now', 'options') }}</button>
                     </a>
                 </div>
