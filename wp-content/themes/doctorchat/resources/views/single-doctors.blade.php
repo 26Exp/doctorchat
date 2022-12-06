@@ -45,13 +45,9 @@
                 <h3 class="doctor-view-section-title">{{ get_field('about', 'options') }}</h3>
                 <p>{{ get_field('about') }}</p>
               @if(get_field('has_video'))
-              <div class="mt-4 aspect-w-16 aspect-h-9">
-                <iframe src="https://www.youtube.com/embed/{{ get_field('video_url') }}?controls=0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-              </div>
+                <div class="mt-4 aspect-w-16 aspect-h-9">
+                  <iframe src="{!! get_field('video_url') !!}" title="{{ get_field('prefix', 'options') }} {{ the_title() }} {{ get_field('specialization') }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
               @endif
             </div>
             @if(get_the_terms( $post->ID, 'symptoms' ))
