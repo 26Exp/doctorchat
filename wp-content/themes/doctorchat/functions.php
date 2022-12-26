@@ -234,7 +234,11 @@ function get_doctors_by_speciality_id($id) {
             ),
         ),
         'posts_per_page' => -1,
+        'meta_key' => 'rating',
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC',
     );
+
     $query = new WP_Query($args);
 
     return $query->get_posts();
