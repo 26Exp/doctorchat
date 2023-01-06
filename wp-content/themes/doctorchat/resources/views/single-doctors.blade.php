@@ -29,11 +29,29 @@
                     <div class="meta">
                         <div class="meta-item">
                             <span><img src="@asset('svgs/message.svg')" alt="chat "/></span>
-                            <span>{{ get_field('price_chat') . ' ' . get_field('currency', 'options')}}</span>
+                            @php
+                              $curl = curl_init();
+                                      curl_setopt_array($curl, array(
+                                          CURLOPT_URL => get_field('api_app', 'options') . "/doctors/". (int)get_field('app_id', $post->ID) ."/price",
+                                          CURLOPT_RETURNTRANSFER => true,
+                                          CURLOPT_ENCODING => "",
+                                          CURLOPT_MAXREDIRS => 10,
+                                          CURLOPT_TIMEOUT => 30,
+                                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                          CURLOPT_CUSTOMREQUEST => "GET",
+                                          CURLOPT_HTTPHEADER => array(
+                                              "cache-control: max-age=604800",
+                                              "content-type: application/json",
+                                          ),
+                                      ));
+
+                                      $prices = json_decode(curl_exec($curl));
+                            @endphp
+                            <span>{{ $prices->chat . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                         <div class="meta-item">
                             <span><img src="@asset('svgs/video.svg')" alt="video"/></span>
-                            <span>{{ get_field('price_video') . ' ' . get_field('currency', 'options')}}</span>
+                            <span>{{ $prices->meet . ' ' . get_field('currency', 'options')}}</span>
                         </div>
                     </div>
                     <a rel="nofollow" href="https://app.doctorchat.md/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}&locale={{ get_field('app_locale', 'options') }}">

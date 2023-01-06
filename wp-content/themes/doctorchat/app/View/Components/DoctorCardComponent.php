@@ -19,12 +19,29 @@ class DoctorCardComponent extends Component
      */
     public function __construct($post)
     {
+        // make curl request to get doctor data
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => get_field('api_app', 'options') . "/doctors/". (int)get_field('app_id', $post->ID) ."/price",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: max-age=604800",
+                "content-type: application/json",
+            ),
+        ));
+
+        $prices = json_decode(curl_exec($curl));
         $this->name = $post->post_title;
         $this->specialization = get_field('specialization', $post->ID) ?? '';
         $this->avatar = get_field('avatar', $post->ID) ?? asset('svgs/doctor.svg');
         $this->permalink = get_permalink($post->ID);
-        $this->priceChat = get_field('price_chat', $post->ID) ?? '-';
-        $this->priceVideo = get_field('price_video', $post->ID) ?? '-';
+        $this->priceChat = $prices->chat ?? '-';
+        $this->priceVideo = $prices->meet ?? '-';
     }
 
     /**
