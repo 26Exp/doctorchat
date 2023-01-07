@@ -6,20 +6,20 @@
     <div class="doctor-caption">
       <h2 class="doctor-name">{{ $name }}</h2>
       <h3 class="doctor-category">{{ $specialization }}</h3>
-      <div class="doctor-meta">
-        <div class="doctor-meta-item">
-          <span>
-            <img src="@asset('svgs/message.svg')" alt="message price"/>
-          </span>
-          <span>{{ $priceChat }} {{ get_field('currency', 'options') }}</span>
-        </div>
-        <div class="doctor-meta-item">
-          <span>
-            <img src="@asset('svgs/video.svg')" alt="video price"/>
-          </span>
-          <span>{{ $priceVideo }} {{ get_field('currency', 'options') }}</span>
-        </div>
-      </div>
+{{--      <div class="doctor-meta">--}}
+{{--        <div class="doctor-meta-item">--}}
+{{--          <span>--}}
+{{--            <img src="@asset('svgs/message.svg')" alt="message price"/>--}}
+{{--          </span>--}}
+{{--          <span>{{ $priceChat }} {{ get_field('currency', 'options') }}</span>--}}
+{{--        </div>--}}
+{{--        <div class="doctor-meta-item">--}}
+{{--          <span>--}}
+{{--            <img src="@asset('svgs/video.svg')" alt="video price"/>--}}
+{{--          </span>--}}
+{{--          <span>{{ $priceVideo }} {{ get_field('currency', 'options') }}</span>--}}
+{{--        </div>--}}
+{{--      </div>--}}
     </div>
   </article>
 </a>
