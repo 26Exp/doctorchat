@@ -9,13 +9,17 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation', 'echo' => false]) !!}
       </nav>
       @endif
-      <div class="hidden items-center space-x-6 xl:flex">
-        <a class="navigation-link" href="/">Ro</a>
-        <a class="navigation-link" href="/ru">Ru</a>
-      </div>
-      <button id="mobile-menu-tirgger" class="xl:hidden">
-        <img class="w-8" src="@asset('svgs/bars.svg')" alt="Menu" />
-      </button>
+
+      @if (get_current_blog_id() != 5)
+        <div class="hidden items-center space-x-6 xl:flex">
+          <a class="navigation-link" href="/">Ro</a>
+          <a class="navigation-link" href="/ru">Ru</a>
+        </div>
+      @endif
+
+        <button id="mobile-menu-tirgger" class="xl:hidden">
+          <img class="w-8" src="@asset('svgs/bars.svg')" alt="Menu" />
+        </button>
     </div>
   </div>
 </header>

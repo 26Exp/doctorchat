@@ -2,6 +2,22 @@
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
+
+<!--    // Add dynamic link rel="alternate"-->
+    <?php
+    $blog_id = get_current_blog_id();
+      switch ($blog_id){
+        case 1:
+          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
+          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
+          break;
+        case 2:
+          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
+          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
+          break;
+      }
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/doctorchat/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/doctorchat/favicon/favicon-32x32.png">
