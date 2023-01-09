@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
-    <?php echo get_current_blog_id();?>
     <?php
       switch (get_current_blog_id()){
         case 1:
@@ -13,15 +12,12 @@
           echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
           echo '<link rel="alternate" href="https://doctorchat.ro/" hreflang="ro-ro" />';
           break;
-        default:
-          if (str_contains($_SERVER['REQUEST_URI'], 'doctorchat.ro')) {
+        case 5:
             echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
             echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
-          }
           break;
       }
       ?>
-
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/doctorchat/favicon/apple-touch-icon.png">

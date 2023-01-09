@@ -10,13 +10,12 @@
       </nav>
       @endif
 
-      @if (!str_contains($_SERVER['REQUEST_URI'], 'doctorchat.ro'))
+      @if (get_current_blog_id() <> 5))
         <div class="hidden items-center space-x-6 xl:flex">
           <a class="navigation-link" href="/">Ro</a>
           <a class="navigation-link" href="/ru">Ru</a>
         </div>
       @endif
-
         <button id="mobile-menu-tirgger" class="xl:hidden">
           <img class="w-8" src="@asset('svgs/bars.svg')" alt="Menu" />
         </button>
