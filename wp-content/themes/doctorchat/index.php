@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
-
+<!--   BLOG_ID: {{ <?php echo  get_current_blog_id(); ?> }}-->
     <?php
       switch (get_current_blog_id()){
         case 1:
