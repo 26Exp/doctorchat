@@ -10,7 +10,7 @@
       </nav>
       @endif
 
-      @if (get_current_blog_id() != 5)
+      @if (!str_contains($_SERVER['REQUEST_URI'], 'doctorchat.ro'))
         <div class="hidden items-center space-x-6 xl:flex">
           <a class="navigation-link" href="/">Ro</a>
           <a class="navigation-link" href="/ru">Ru</a>

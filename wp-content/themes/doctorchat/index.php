@@ -13,9 +13,11 @@
           echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
           echo '<link rel="alternate" href="https://doctorchat.ro/" hreflang="ro-ro" />';
           break;
-        case 5:
-          echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
-          echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
+        default:
+          if (str_contains($_SERVER['REQUEST_URI'], 'doctorchat.ro')) {
+            echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
+            echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
+          }
           break;
       }
       ?>
