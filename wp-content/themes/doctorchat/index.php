@@ -5,17 +5,18 @@
 
 <!--    // Add dynamic link rel="alternate"-->
     <?php
-    $blog_id = get_current_blog_id();
-      switch ($blog_id){
-        case 1:
-          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
-          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
-          break;
-        case 2:
-          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
-          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
-          break;
-      }
+//    $blog_id = get_current_blog_id();
+//      switch ($blog_id){
+//        case 1:
+//          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
+//          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
+//          break;
+//        case 2:
+//          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
+//          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
+//          break;
+//      }
+      ?>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
