@@ -244,8 +244,6 @@ function get_doctors_by_speciality_id($id) {
     return $query->get_posts();
 }
 
-<?php
-
 add_action( 'admin_init', 'user_move_init' );
 add_action( 'admin_menu', 'user_move_add_page' );
 
