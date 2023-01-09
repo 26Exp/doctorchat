@@ -243,3 +243,110 @@ function get_doctors_by_speciality_id($id) {
 
     return $query->get_posts();
 }
+
+<?php
+
+add_action( 'admin_init', 'user_move_init' );
+add_action( 'admin_menu', 'user_move_add_page' );
+
+/**
+ * Init plugin options to white list our options
+ */
+function user_move_init(){
+    register_setting( 'user_move', 'user_move', 'user_move_validate' );
+}
+
+/**
+ * Load up the menu page
+ */
+function user_move_add_page() {
+    add_users_page( __( 'User Import', 'user_move' ), __( 'User Import', 'user_move' ), 'edit_theme_options', 'theme_options', 'user_move_do_page' );
+}
+
+/**
+ * Create the options page
+ */
+function user_move_do_page() {
+
+    if ( ! isset( $_REQUEST['settings-updated'] ) )
+        $_REQUEST['settings-updated'] = false;
+
+    ?>
+
+    <div class="wrap">
+        <h2><?php echo __( ' User Network Import', 'user_move' ) ; ?></h2>
+
+        <?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
+            <p>Starting transfer</p><?php
+            global $wpdb;
+            switch_to_blog(2);
+
+            $aUsersID = $wpdb->get_col( $wpdb->prepare("SELECT $wpdb->users.ID FROM $wpdb->users" ));
+            /*
+            Once we have the IDs we loop through them with a Foreach statement.
+            */
+            foreach ( $aUsersID as $iUserID ) :
+                /*
+                We use get_userdata() function with each ID.
+                */
+                $user = get_userdata( $iUserID );
+
+                $capabilities = $user->{$wpdb->prefix . 'capabilities'};
+                if(!empty($capabilities)){
+
+                    if ( !isset( $wp_roles ) ){
+                        $wp_roles = new WP_Roles();
+                    }
+                    $r = '';
+                    foreach ( $wp_roles->role_names as $role => $name ) :
+                        if ( array_key_exists( $role, $capabilities ) ){
+                            $r = $role;
+                            break;
+                        }
+
+                    endforeach;
+                }
+                if(empty($r)){
+                    $r = 'subscriber';
+                }
+
+                /*
+                Here we finally print the details wanted.
+                Check the description of the database tables linked above to see
+                all the fields you can retrieve.
+                To echo a property simply call it with $user->name_of_the_column.
+                In this example I print the first and last name.
+                */
+                echo '<li>Transfering '.$user->user_login.' ('. ucwords( strtolower( $user->first_name . ' ' . $user->last_name ) ) . '), '.$r.'</li>';
+
+                add_user_to_blog(1,$iUserID,$r);
+
+                /*
+                 The strtolower and ucwords part is to be sure
+                 the full names will all be capitalized.
+                */
+            endforeach;
+
+            restore_current_blog();
+
+            ?><p>Transfer complete</p>
+
+        <?php endif; ?>
+
+        <form method="post" action="options.php">
+            <?php settings_fields( 'user_move' ); ?>
+            <p>Click to import Users from the blog site to the main site</p>
+            <p class="submit">
+                <input type="submit" class="button-primary" value="<?php _e( 'Start Import', 'user_move' ); ?>" />
+            </p>
+        </form>
+    </div>
+    <?php
+}
+
+/**
+ * Sanitize and validate input. Accepts an array, return a sanitized array.
+ */
+function user_move_validate( $input ) {
+    return $input;
+}
