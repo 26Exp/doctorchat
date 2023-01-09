@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8">
 
-<!--    // Add dynamic link rel="alternate"-->
     <?php
-//    $blog_id = get_current_blog_id();
-//      switch ($blog_id){
-//        case 1:
-//          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
-//          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
-//          break;
-//        case 2:
-//          echo '<link rel="alternate" href="https://doctorchat.ru" hreflang="ru" />';
-//          echo '<link rel="alternate" href="https://doctorchat.com" hreflang="en" />';
-//          break;
-//      }
+      switch (get_current_blog_id()){
+        case 1:
+          echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
+          echo '<link rel="alternate" href="https://doctorchat.ro/" hreflang="ro-ro" />';
+          break;
+        case 2:
+          echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
+          echo '<link rel="alternate" href="https://doctorchat.ro/" hreflang="ro-ro" />';
+          break;
+        case 5:
+          echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
+          echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
+          break;
+      }
       ?>
 
 
