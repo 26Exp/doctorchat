@@ -120,6 +120,27 @@ body.home .doctorchat-header-content {
   @apply pointer-events-auto opacity-100;
 }
 
+/* Hero Section */
+.hero-section {
+  @apply overflow-hidden;
+}
+
+.hero-section .swiper-pagination {
+  @apply bottom-8 !w-auto right-8 lg:bottom-10 lg:right-10 2xl:bottom-16 2xl:right-36 left-auto;
+}
+
+.hero-section .swiper-pagination-bullet {
+  @apply w-3.5 h-3.5 bg-white rounded-full relative !mx-3;
+}
+
+.hero-section .swiper-pagination-bullet::after {
+  @apply content-[""] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 border border-white rounded-full scale-0 transition-transform duration-150;
+}
+
+.hero-section .swiper-pagination-bullet-active::after {
+  @apply scale-100;
+}
+
 /* Highlights Section */
 .highlights-block {
   @apply flex max-w-[482px] flex-1 flex-col items-start justify-start rounded-2xl bg-white p-5 text-left;

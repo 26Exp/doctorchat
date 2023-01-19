@@ -45,6 +45,26 @@ function mobileNavigation() {
   });
 }
 
+function heroSectionSlider() {
+  if (!document.querySelector("#hero-section-slider")) return;
+
+  new Swiper("#hero-section-slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
+}
+
 function testimonialsSlider() {
   if (!document.querySelector("#testimonials")) return;
 
@@ -114,6 +134,7 @@ function doctorsCategories() {
 
 window.addEventListener("DOMContentLoaded", () => {
   mobileNavigation();
+  heroSectionSlider();
   testimonialsSlider();
   doctorsCategories();
   doctorViewTestimonialsSlider();
