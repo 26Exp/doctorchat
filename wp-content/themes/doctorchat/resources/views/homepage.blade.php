@@ -44,82 +44,79 @@
                 </div>
             </section>
         </div>
+
+        @if(get_field('show_hero_2'))
+          <div class="swiper-slide">
+              <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+                  <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
+                  <div class="dc-container relative z-10 h-full w-full">
+                      <div class="flex h-full w-full flex-col justify-center">
+                          <header class="mb-7 lg:mb-12">
+                              <h2 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
+                                {{ get_field('h2_intro_2') }}
+                              </h2>
+                              <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
+                                  {{ get_field('sub_header_text_2') }}
+                              </h3>
+                          </header>
+                          <main>
+                              <div class="max-w-4xl pl-5 lg:pl-8">
+                                  <ul class="list-disc space-y-1 text-lg font-normal text-white lg:text-4xl">
+                                      @foreach (get_field('strong_points_2') as $item)
+                                      <li>{{ $item }}</li>
+                                      @endforeach
+                                  </ul>
+                              </div>
+                          </main>
+                          <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
+                              <a href="{{ get_field('cta_button_url_2') }}">
+                                  <button class="btn btn-default">{{ get_field('cta_button_2') }}</button>
+                              </a>
+                          </footer>
+                      </div>
+                  </div>
+              </section>
+          </div>
+        @endif
+
+        @if(get_field('show_hero_3'))
         <div class="swiper-slide">
-            <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1673942012736-e413ba24b928?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+            <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
                 <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
                 <div class="dc-container relative z-10 h-full w-full">
                     <div class="flex h-full w-full flex-col justify-center">
                         <header class="mb-7 lg:mb-12">
-                            <h1 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
-                                SLIDER TITLE #2
-                            </h1>
-                            <h2 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
-                                {{ get_field('sub_header_text') }}
+                            <h2 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
+                              {{ get_field('h2_intro_3') }}
                             </h2>
+                            <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
+                                {{ get_field('sub_header_text_3') }}
+                            </h3>
                         </header>
                         <main>
                             <div class="max-w-4xl pl-5 lg:pl-8">
                                 <ul class="list-disc space-y-1 text-lg font-normal text-white lg:text-4xl">
-                                    @foreach (get_field('strong_points') as $item)
+                                    @foreach (get_field('strong_points_3') as $item)
                                     <li>{{ $item }}</li>
                                     @endforeach
                                 </ul>
                             </div>
                         </main>
                         <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
-                            <a href="{{ get_field('cta_button_url') }}">
-                                <button class="btn btn-default">{{ get_field('cta_button') }}</button>
+                            <a href="{{ get_field('cta_button_url_3') }}">
+                                <button class="btn btn-default">{{ get_field('cta_button_3') }}</button>
                             </a>
-                            @if (get_field('cta_doctors'))
-                            <a href="{{ get_field('cta_doctors_button_url') }}">
-                                <button class="btn btn-default btn-outline">{{ get_field('cta_doctors_button') }}</button>
-                            </a>
-                            @endif
                         </footer>
                     </div>
                 </div>
             </section>
         </div>
-        <div class="swiper-slide">
-            <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1673894762575-143182e25205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
-                <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
-                <div class="dc-container relative z-10 h-full w-full">
-                    <div class="flex h-full w-full flex-col justify-center">
-                        <header class="mb-7 lg:mb-12">
-                            <h1 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
-                                SLIDER TITLE #3
-                            </h1>
-                            <h2 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
-                                {{ get_field('sub_header_text') }}
-                            </h2>
-                        </header>
-                        <main>
-                            <div class="max-w-4xl pl-5 lg:pl-8">
-                                <ul class="list-disc space-y-1 text-lg font-normal text-white lg:text-4xl">
-                                    @foreach (get_field('strong_points') as $item)
-                                    <li>{{ $item }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </main>
-                        <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
-                            <a href="{{ get_field('cta_button_url') }}">
-                                <button class="btn btn-default">{{ get_field('cta_button') }}</button>
-                            </a>
-                            @if (get_field('cta_doctors'))
-                            <a href="{{ get_field('cta_doctors_button_url') }}">
-                                <button class="btn btn-default btn-outline">{{ get_field('cta_doctors_button') }}</button>
-                            </a>
-                            @endif
-                        </footer>
-                    </div>
-                </div>
-            </section>
-        </div>
+        @endif
     </div>
     <div class="swiper-pagination"></div>
 </div>
 <!-- Hero Section End -->
+
 
 <!-- Highlights Section Start -->
 <section class="pt-14 pb-1 lg:pt-36 lg:pb-5">
