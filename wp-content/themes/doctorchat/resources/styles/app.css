@@ -69,16 +69,20 @@ body.home .doctorchat-header-content {
 }
 
 .navigation {
-  @apply flex items-center space-x-8;
+  @apply flex items-center space-x-6;
 }
 
 .navigation a {
   @apply inline-block text-xl text-white transition-colors hover:text-gray-200;
 }
 
+.navigation .last-menu-item {
+  @apply bg-doctorchat-red rounded-full px-6 py-2 leading-none text-white;
+}
+
 @screen 2xl {
   .navigation {
-    @apply space-x-12;
+    @apply space-x-8;
   }
 
   .navigation a,
@@ -118,6 +122,14 @@ body.home .doctorchat-header-content {
 
 .mobile-navigation.open ~ .mobile-navigation-backdrop {
   @apply pointer-events-auto opacity-100;
+}
+
+.mobile-navigation .last-menu-item {
+  @apply bg-doctorchat-red rounded-full px-6 py-2 leading-none inline-flex;
+}
+
+.mobile-navigation .last-menu-item a {
+  @apply text-white;
 }
 
 /* Hero Section */
