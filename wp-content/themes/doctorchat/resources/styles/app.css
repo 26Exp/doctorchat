@@ -76,7 +76,7 @@ body.home .doctorchat-header-content {
   @apply inline-block text-xl text-white transition-colors hover:text-gray-200;
 }
 
-.navigation .last-menu-item {
+.navigation li:last-of-type {
   @apply bg-doctorchat-red rounded-full px-6 py-2 leading-none text-white;
 }
 
@@ -124,11 +124,11 @@ body.home .doctorchat-header-content {
   @apply pointer-events-auto opacity-100;
 }
 
-.mobile-navigation .last-menu-item {
+.mobile-navigation .mobile-navigation-nav li:last-of-type {
   @apply bg-doctorchat-red rounded-full px-6 py-2 leading-none inline-flex;
 }
 
-.mobile-navigation .last-menu-item a {
+.mobile-navigation .mobile-navigation-nav li:last-of-type a {
   @apply text-white;
 }
 
