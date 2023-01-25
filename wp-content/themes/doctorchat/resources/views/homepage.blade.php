@@ -7,7 +7,7 @@
 @section('content')
 <!-- Hero Section Start -->
 <div class="hero-section" id="hero-section-slider">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper z-20">
         <div class="swiper-slide">
             <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url({{ asset('images/hero-section.jpg') }})">
                 <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
@@ -46,37 +46,37 @@
         </div>
 
         @if(get_field('show_hero_2'))
-          <div class="swiper-slide">
-              <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
-                  <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
-                  <div class="dc-container relative z-10 h-full w-full">
-                      <div class="flex h-full w-full flex-col justify-center">
-                          <header class="mb-7 lg:mb-12">
-                              <h2 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
+        <div class="swiper-slide">
+            <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+                <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>
+                <div class="dc-container relative z-10 h-full w-full">
+                    <div class="flex h-full w-full flex-col justify-center">
+                        <header class="mb-7 lg:mb-12">
+                            <h2 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
                                 {{ get_field('h2_intro_2') }}
-                              </h2>
-                              <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
-                                  {{ get_field('sub_header_text_2') }}
-                              </h3>
-                          </header>
-                          <main>
-                              <div class="max-w-4xl pl-5 lg:pl-8">
-                                  <ul class="list-disc space-y-1 text-lg font-normal text-white lg:text-4xl">
-                                      @foreach (get_field('strong_points_2') as $item)
-                                      <li>{{ $item }}</li>
-                                      @endforeach
-                                  </ul>
-                              </div>
-                          </main>
-                          <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
-                              <a href="{{ get_field('cta_button_url_2') }}">
-                                  <button class="btn btn-default">{{ get_field('cta_button_2') }}</button>
-                              </a>
-                          </footer>
-                      </div>
-                  </div>
-              </section>
-          </div>
+                            </h2>
+                            <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
+                                {{ get_field('sub_header_text_2') }}
+                            </h3>
+                        </header>
+                        <main>
+                            <div class="max-w-4xl pl-5 lg:pl-8">
+                                <ul class="list-disc space-y-1 text-lg font-normal text-white lg:text-4xl">
+                                    @foreach (get_field('strong_points_2') as $item)
+                                    <li>{{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </main>
+                        <footer class="mt-14 flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-5 lg:mt-16 lg:justify-start">
+                            <a href="{{ get_field('cta_button_url_2') }}">
+                                <button class="btn btn-default">{{ get_field('cta_button_2') }}</button>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </div>
         @endif
 
         @if(get_field('show_hero_3'))
@@ -87,7 +87,7 @@
                     <div class="flex h-full w-full flex-col justify-center">
                         <header class="mb-7 lg:mb-12">
                             <h2 class="mb-3 text-5xl font-bold uppercase text-white lg:text-8xl">
-                              {{ get_field('h2_intro_3') }}
+                                {{ get_field('h2_intro_3') }}
                             </h2>
                             <h3 class="text-4xl font-bold text-doctorchat-mint lg:text-6xl">
                                 {{ get_field('sub_header_text_3') }}
