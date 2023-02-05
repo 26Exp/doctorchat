@@ -7,7 +7,7 @@
 @section('content')
 <!-- Hero Section Start -->
 <div class="hero-section" id="hero-section-slider">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper z-[21]">
         <div class="swiper-slide">
             <section class="relative h-screen bg-cover bg-[center_right_25%] bg-no-repeat pt-[10vh] md:bg-center" style="background-image: url({{ asset('images/hero-section.jpg') }})">
                 <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-black/30"></div>

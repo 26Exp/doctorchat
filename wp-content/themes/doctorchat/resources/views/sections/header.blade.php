@@ -1,4 +1,4 @@
-<header class="doctorchat-header top-0 left-0 z-20 w-full bg-doctorchat-turquoise">
+<header class="doctorchat-header top-0 left-0 z-30 w-full bg-doctorchat-turquoise">
   <div class="dc-container">
     <div class="doctorchat-header-content flex items-center justify-between py-7 md:py-8">
       <a class="-translate-y-1.5" href="{{ home_url('/') }}">
