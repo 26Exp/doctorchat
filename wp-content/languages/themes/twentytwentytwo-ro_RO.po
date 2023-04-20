@@ -2,19 +2,19 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Two package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-25 06:05:56+0000\n"
+"PO-Revision-Date: 2023-03-29 20:47:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n % 100 >= 2 && n % 100 <= 19) ? 1 : 2);\n"
-"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
 "Language: ro\n"
 "Project-Id-Version: Themes - Twenty Twenty-Two\n"
 
 #. Description of the theme
 #, gp-priority: high
-msgid "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
-msgstr "Construită pe o fundație solid proiectată, Twenty Twenty-Two îmbrățișează ideea că toată lumea merită un site web cu adevărat unic. Stilurile subtile ale temei sunt inspirate de diversitatea și versatilitatea păsărilor: tipograficele sale sunt simple dar puternice, paleta de culori este inspirată din natură, iar elementele sale pentru aranjament se potrivesc bine în pagină. Adevărata valoare a lui Twenty Twenty-Two constă în oportunitatea de personalizare. Tema este creată pentru a profita de funcționalitățile de editare completă a site-ului introduse în WordPress 5.9, ceea ce înseamnă că tipograficele, culorile și aranjamentul fiecărei pagini de pe site-ul tău pot fi personalizate pentru a se potrivi viziunii tale. De asemenea, include zeci de modele de blocuri, oferind o gamă largă de aranjamente proiectate profesional, în doar câteva clicuri. Indiferent dacă construiești un site web cu o singură pagină, un blog, un site web de afaceri sau un portofoliu, Twenty Twenty-Two te va ajuta să creezi un site unic."
+msgid "Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours."
+msgstr "Construită pe o fundație solid proiectată, Twenty Twenty-Two îmbrățișează ideea că toată lumea merită un site web cu adevărat unic. Stilurile subtile ale temei sunt inspirate de diversitatea și versatilitatea păsărilor: tipograficele sale sunt simple dar puternice, paleta de culori este inspirată din natură, iar elementele sale pentru aranjament se potrivesc bine în pagină. Adevărata valoare a lui Twenty Twenty-Two constă în oportunitatea de personalizare. Tema este creată pentru a profita de funcționalitățile Editorului de site introduse în WordPress 5.9, ceea ce înseamnă că tipograficele, culorile și aranjamentul fiecărei pagini de pe site-ul tău pot fi personalizate pentru a se potrivi viziunii tale. De asemenea, include zeci de modele de blocuri, oferind o gamă largă de aranjamente proiectate profesional, în doar câteva clicuri. Indiferent dacă construiești un site web cu o singură pagină, un blog, un site web de afaceri sau un portofoliu, Twenty Twenty-Two te va ajuta să creezi un site unic."
 
 #. Theme Name of the theme
 #, gp-priority: high
@@ -502,16 +502,13 @@ msgid "Title and button header"
 msgstr "Antet cu titlu și buton"
 
 #: inc/patterns/header-text-only-with-tagline-black-background.php:6
-msgid "Text-only header with tagline and black background"
-msgstr "Antet doar cu text și slogan pe fundal negru"
-
-#: inc/patterns/header-text-only-salmon-background.php:6
-msgid "Text-only header with salmon background"
-msgstr "Antet doar cu text pe fundal culoarea somonului"
+msgid "Text-only header with tagline and background"
+msgstr "Antet doar cu text, etichetă și fundal"
 
 #: inc/patterns/header-text-only-green-background.php:6
-msgid "Text-only header with green background"
-msgstr "Antet doar cu text pe fundal verde"
+#: inc/patterns/header-text-only-salmon-background.php:6
+msgid "Text-only header with background"
+msgstr "Antet doar cu text și fundal"
 
 #: inc/patterns/header-stacked.php:6
 msgid "Logo and navigation header"
@@ -522,16 +519,16 @@ msgid "Small header with dark background"
 msgstr "Antet mic pe fundal întunecat"
 
 #: inc/patterns/header-logo-navigation-social-black-background.php:6
-msgid "Logo, navigation, and social links header with black background"
-msgstr "Antet pe fundal negru cu logo, navigare și legături sociale"
+msgid "Logo, navigation, and social links header with background"
+msgstr "Antet cu logo, navigare și legături sociale cu fundal"
 
 #: inc/patterns/header-logo-navigation-offset-tagline.php:6
 msgid "Logo, navigation, and offset tagline Header"
 msgstr "Antet cu logo, navigare și slogan decalat"
 
 #: inc/patterns/header-logo-navigation-gray-background.php:6
-msgid "Logo and navigation header with gray background"
-msgstr "Antet pe fundal gri cu logo și navigare"
+msgid "Logo and navigation header with background"
+msgstr "Antetul cu logo și navigare cu fundal"
 
 #: inc/patterns/header-large-dark.php:24
 #: inc/patterns/hidden-heading-and-bird.php:14
@@ -559,16 +556,16 @@ msgid "Default header"
 msgstr "Antet implicit"
 
 #: inc/patterns/header-centered-title-navigation-social.php:6
-msgid "Centered header with navigation, social links, and salmon background"
-msgstr "Antet centrat cu navigare, legături sociale și fundal de culoarea somonului"
+msgid "Centered header with navigation, social links, and background"
+msgstr "Antet centrat cu navigare, legături sociale și fundal"
 
 #: inc/patterns/header-centered-logo.php:6
 msgid "Header with centered logo"
 msgstr "Antet cu logo centrat"
 
 #: inc/patterns/header-centered-logo-black-background.php:6
-msgid "Header with centered logo and black background"
-msgstr "Antet cu logo centrat și fundal negru"
+msgid "Header with centered logo and background"
+msgstr "Antet cu logo centrat și fundal"
 
 #: inc/patterns/general-wide-image-intro-buttons.php:31
 msgid "Learn More"

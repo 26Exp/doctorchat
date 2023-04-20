@@ -23,5 +23,8 @@
     "@roots/sage": "6.4.5",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001480"
   }
 }
