@@ -3,6 +3,7 @@
 namespace Yoast\WP\SEO\Premium\Integrations\Third_Party;
 
 use WP_Post;
+use WPSEO_Admin_Asset_Manager;
 use WPSEO_Capability_Utils;
 use WPSEO_Custom_Fields_Plugin;
 use WPSEO_Language_Utils;
@@ -142,16 +143,30 @@ class Elementor_Premium implements Integration_Interface {
 	 * @return void
 	 */
 	public function send_data_to_assets() {
-		$analysis_seo = new WPSEO_Metabox_Analysis_SEO();
+		$analysis_seo   = new WPSEO_Metabox_Analysis_SEO();
+		$assets_manager = new WPSEO_Admin_Asset_Manager();
 
 		$data = [
-			'restApi'            => $this->get_rest_api_config(),
-			'seoAnalysisEnabled' => $analysis_seo->is_enabled(),
-			'licensedURL'        => WPSEO_Utils::get_home_url(),
-			'settingsPageUrl'    => \admin_url( 'admin.php?page=wpseo_dashboard#top#features' ),
-			'integrationsTabURL' => \admin_url( 'admin.php?page=wpseo_dashboard#top#integrations' ),
-
+			'restApi'                         => $this->get_rest_api_config(),
+			'seoAnalysisEnabled'              => $analysis_seo->is_enabled(),
+			'licensedURL'                     => WPSEO_Utils::get_home_url(),
+			'settingsPageUrl'                 => \admin_url( 'admin.php?page=wpseo_page_settings#/site-features#card-wpseo-enable_link_suggestions' ),
+			'integrationsTabURL'              => \admin_url( 'admin.php?page=wpseo_integrations' ),
+			'commonsScriptUrl'                => \plugins_url(
+				'assets/js/dist/commons-premium-' . $assets_manager->flatten_version( \WPSEO_PREMIUM_VERSION ) . \WPSEO_CSSJS_SUFFIX . '.js',
+				\WPSEO_PREMIUM_FILE
+			),
+			'premiumAssessmentsScriptUrl'     => \plugins_url(
+				'assets/js/dist/register-premium-assessments-' . $assets_manager->flatten_version( \WPSEO_PREMIUM_VERSION ) . \WPSEO_CSSJS_SUFFIX . '.js',
+				\WPSEO_PREMIUM_FILE
+			),
 		];
+		if ( \defined( 'YOAST_SEO_TEXT_FORMALITY' ) && \YOAST_SEO_TEXT_FORMALITY === true ) {
+			$data['textFormalityScriptUrl'] = \plugins_url(
+				'assets/js/dist/register-text-formality-' . $assets_manager->flatten_version( \WPSEO_PREMIUM_VERSION ) . \WPSEO_CSSJS_SUFFIX . '.js',
+				\WPSEO_PREMIUM_FILE
+			);
+		}
 		$data = \array_merge( $data, $this->get_post_metabox_config() );
 
 		if ( \current_user_can( 'edit_others_posts' ) ) {
@@ -176,14 +191,15 @@ class Elementor_Premium implements Integration_Interface {
 		$site_locale = \get_locale();
 		$language    = WPSEO_Language_Utils::get_language( $site_locale );
 
+
 		return [
-			'currentObjectId'           => $this->get_metabox_post()->ID,
-			'currentObjectType'         => 'post',
-			'linkSuggestionsEnabled'    => ( $link_suggestions_enabled ) ? 'enabled' : 'disabled',
-			'linkSuggestionsAvailable'  => $is_prominent_words_available,
-			'linkSuggestionsUnindexed'  => ! $this->is_prominent_words_indexing_completed() && WPSEO_Capability_Utils::current_user_can( 'wpseo_manage_options' ),
-			'perIndexableLimit'         => $this->per_indexable_limit( $language ),
-			'isProminentWordsAvailable' => $is_prominent_words_available,
+			'currentObjectId'                 => $this->get_metabox_post()->ID,
+			'currentObjectType'               => 'post',
+			'linkSuggestionsEnabled'          => ( $link_suggestions_enabled ) ? 'enabled' : 'disabled',
+			'linkSuggestionsAvailable'        => $is_prominent_words_available,
+			'linkSuggestionsUnindexed'        => ! $this->is_prominent_words_indexing_completed() && WPSEO_Capability_Utils::current_user_can( 'wpseo_manage_options' ),
+			'perIndexableLimit'               => $this->per_indexable_limit( $language ),
+			'isProminentWordsAvailable'       => $is_prominent_words_available,
 		];
 	}
 
@@ -267,7 +283,8 @@ class Elementor_Premium implements Integration_Interface {
 	 * @return string The post type.
 	 */
 	protected function get_current_post_type() {
-		$post = \filter_input( \INPUT_GET, 'post', \FILTER_SANITIZE_STRING );
+		// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- This deprecation will be addressed later.
+		$post = \filter_input( \INPUT_GET, 'post', @\FILTER_SANITIZE_STRING );
 
 		if ( $post ) {
 			return \get_post_type( \get_post( $post ) );
@@ -276,7 +293,7 @@ class Elementor_Premium implements Integration_Interface {
 		return \filter_input(
 			\INPUT_GET,
 			'post_type',
-			\FILTER_SANITIZE_STRING,
+			@\FILTER_SANITIZE_STRING, // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- This deprecation will be addressed later.
 			[
 				'options' => [
 					'default' => 'post',
