@@ -38,7 +38,7 @@
   <div class="mobile-navigation-backdrop"></div>
 </div>
 
-<a href="https://app.doctorchat.md/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}@if(get_current_blog_id() == 2)&locale=ru @endif" rel="nofollow">
+<a href="https://app.doctorchat@if(get_current_blog_id() == 5).ro@else.md@endif/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}@if(get_current_blog_id() == 2)&locale=ru @endif" rel="nofollow">
   <button id="request-consultation" class="fixed left-1/2 bottom-8 -translate-x-1/2 text-base whitespace-nowrap rounded-full py-4 px-8 bg-doctorchat-red text-white flex items-center justify-center z-20 shadow-lg sm:-translate-x-0 sm:left-auto sm:right-8 md:bottom-10 md:right-12 md:text-lg">
     <span class="flex items-center justify-center pr-3">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
