@@ -54,7 +54,7 @@
 {{--                            <span>{{ $prices->meet . ' ' . get_field('currency', 'options')}}</span>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
-                    <a rel="nofollow" href="https://app.{{ get_field('app_domain', 'options') }}/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}&locale={{ get_field('app_locale', 'options') }}">
+                    <a rel="nofollow" href="https://app.doctorchat@if(get_current_blog_id() == 5).ro@else.md@endif/registration-flow/select-doctor?doctor_id={{ get_field('app_id') }}&locale={{ get_field('app_locale', 'options') }}">
                       <button class="action" id="request-consultation-doctor">{{ get_field('book_now', 'options') }}</button>
                     </a>
                 </div>
