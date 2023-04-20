@@ -14,7 +14,7 @@
           break;
         case 5:
             echo '<link rel="alternate" href="https://doctorchat.md/" hreflang="ro-md" />';
-            echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
+//            echo '<link rel="alternate" href="https://doctorchat.md/ru/" hreflang="ru" />';
           break;
       }
       ?>
@@ -29,21 +29,10 @@
     <meta name="theme-color" content="#79d8d5">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-W5ZWSFM');</script>
-    <!-- End Google Tag Manager -->
     <?php wp_head(); ?>
   </head>
 
   <body <?php body_class(); ?>>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5ZWSFM"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
