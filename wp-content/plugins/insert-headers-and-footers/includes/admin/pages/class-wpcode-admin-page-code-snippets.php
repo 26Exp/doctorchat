@@ -260,10 +260,12 @@ class WPCode_Admin_Page_Code_Snippets extends WPCode_Admin_Page {
 			}
 			if ( isset( $_GET['error'] ) ) {
 				$error_count = absint( $_GET['error'] );
-				$notice      .= ' ' . sprintf( /* translators: %d - Failed to activate snippets count. */
-						_n( '%d snippet was not activated due to an error.', '%d snippets were not activated due to errors.', $error_count, 'insert-headers-and-footers' ),
-						$error_count
-					);
+
+				$notice .= ' ';
+				$notice .= sprintf( /* translators: %d - Failed to activate snippets count. */
+					_n( '%d snippet was not activated due to an error.', '%d snippets were not activated due to errors.', $error_count, 'insert-headers-and-footers' ),
+					$error_count
+				);
 			}
 		}
 

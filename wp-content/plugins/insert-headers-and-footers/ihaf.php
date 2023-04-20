@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPCode Lite
  * Plugin URI: https://www.wpcode.com/
- * Version: 2.0.7
+ * Version: 2.0.10
  * Requires at least: 4.6
  * Requires PHP: 5.5
  * Tested up to: 6.1
@@ -260,6 +260,13 @@ class WPCode {
 	public $notice;
 
 	/**
+	 * Instance for logging errors.
+	 *
+	 * @var WPCode_File_Logger
+	 */
+	public $logger;
+
+	/**
 	 * Main instance of WPCode.
 	 *
 	 * @return WPCode
@@ -279,7 +286,7 @@ class WPCode {
 	private function __construct() {
 		$this->setup_constants();
 		$this->includes();
-		$this->load_components();
+		add_action( 'plugins_loaded', array( $this, 'load_components' ), - 1 );
 
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ), 15 );
 	}
@@ -317,6 +324,8 @@ class WPCode {
 		require_once WPCODE_PLUGIN_PATH . 'includes/global-output.php';
 		// Use the old class name for backwards compatibility.
 		require_once WPCODE_PLUGIN_PATH . 'includes/legacy.php';
+		// Add backwards compatibility for older versions of PHP or WP.
+		require_once WPCODE_PLUGIN_PATH . 'includes/compat.php';
 		// Register code snippets post type.
 		require_once WPCODE_PLUGIN_PATH . 'includes/post-type.php';
 		// The snippet class.
@@ -339,6 +348,8 @@ class WPCode {
 		require_once WPCODE_PLUGIN_PATH . 'includes/class-wpcode-capabilities.php';
 		// Install routines.
 		require_once WPCODE_PLUGIN_PATH . 'includes/class-wpcode-install.php';
+		// Logging class.
+		require_once WPCODE_PLUGIN_PATH . 'includes/class-wpcode-file-logger.php';
 
 		if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) ) {
 			require_once WPCODE_PLUGIN_PATH . 'includes/icons.php'; // This is not needed in the frontend atm.
@@ -387,6 +398,7 @@ class WPCode {
 		$this->conditional_logic = new WPCode_Conditional_Logic();
 		$this->cache             = new WPCode_Snippet_Cache();
 		$this->settings          = new WPCode_Settings();
+		$this->logger            = new WPCode_File_Logger();
 
 		if ( is_admin() || ( defined( 'DOING_CRON' ) && DOING_CRON ) ) {
 			$this->file_cache        = new WPCode_File_Cache();
@@ -398,8 +410,13 @@ class WPCode {
 			$this->admin_page_loader = new WPCode_Admin_Page_Loader_Lite();
 			$this->notice            = new WPCode_Notice();
 
+			// Metabox class.
 			new WPCode_Metabox_Snippets_Lite();
+			// Usage tracking class.
+			new WPCode_Usage_Tracking_Lite();
 		}
+
+		do_action( 'wpcode_loaded' );
 	}
 
 	/**
