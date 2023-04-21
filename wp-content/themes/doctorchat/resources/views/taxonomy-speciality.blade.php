@@ -5,7 +5,11 @@
         <div class="dc-container">
             <div class="page-header-content">
                 <h1 class="!text-4xl md:!text-5xl">{{ single_term_title() }}</h1>
+                @if(get_field('show_disclaimer'))
+                    <p class="mt-4">{{ get_field('disclaimer') }}</p>
+                @endif
             </div>
+
         </div>
     </section>
 
